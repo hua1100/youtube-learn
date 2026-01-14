@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.python-version
+
+# Environment Variables
+.env
+
+# Node/Frontend
+dashboard/node_modules/
+dashboard/dist/
+.DS_Store
+
+# Logs and Runtime
+scheduler.log
+scheduler.pid
+
+# Data (Generated)
+monitor_state.json
+videos.json
+new_videos.txt
+summary_*.md
+transcripts/
