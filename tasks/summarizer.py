@@ -45,7 +45,7 @@ def get_transcript_text(video_id):
         # 轉換為純文字
         if transcript_obj:
             # 假設 transcript_obj 是可迭代的 FetchedTranscriptSnippet 對象
-            full_text = " ".join([snippet.text for snippet in transcript_obj])
+            full_text = " ".join([snippet['text'] for snippet in transcript_obj])
             return full_text
         return None
     except Exception as e:

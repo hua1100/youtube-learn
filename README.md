@@ -36,5 +36,14 @@ LLM_MODEL=gpt-4o
 
 1.  **Push** 本專案到 GitHub。
 2.  在 Zeabur 建立專案並連結 GitHub Repo。
-3.  設定環境變數 (`LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL`)。
-4.  等待部署完成，獲得公開網址。
+3.  設定環境變數：
+    *   `LLM_API_KEY`: API 金鑰
+    *   `LLM_BASE_URL`: API 網址
+    *   `LLM_MODEL`: 模型名稱 (預設 gpt-4o)
+    *   **HTTPS_PROXY** (選填): 如果遇到 YouTube 阻擋 (IP Block)，請填入代理伺服器網址 (例如 `http://user:pass@proxy.com:port`)。
+
+## 常見問題
+
+### 逐字稿被 YouTube 封鎖 (IP Block)
+如果部署在 Zeabur/AWS/GCP 等雲端平台，YouTube 會封鎖其 IP。
+解決方案：購買 Residence Proxy (住宅代理) 或 Smart Proxy，並在環境變數設定 `HTTPS_PROXY`。

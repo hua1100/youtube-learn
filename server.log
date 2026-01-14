@@ -1,0 +1,60 @@
+🚀 Building Frontend...
+
+up to date, audited 353 packages in 1s
+
+134 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> dashboard@0.0.0 build
+> vite build
+
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 2349 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.71 kB │ gzip:   0.41 kB
+dist/assets/index-CPRBtMv2.css   55.94 kB │ gzip:   9.24 kB
+dist/assets/index-ztIq3Op3.js   487.03 kB │ gzip: 153.45 kB
+✓ built in 2.64s
+✅ Frontend Build Complete.
+🚀 Starting Production Server...
+🌐 Open http://localhost:8000 in your browser.
+INFO:     Started server process [26200]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:65185 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65185 - "GET /assets/index-CPRBtMv2.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65186 - "GET /assets/index-ztIq3Op3.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65185 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65186 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65215 - "GET /api/summary/k8cnVCMYmNc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65222 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65253 - "GET /api/summary/sDyTcXXn1AU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65256 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65259 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49193 - "GET /api/summary/k8cnVCMYmNc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49196 - "GET /api/summary/oRqEL0t67fo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49486 - "GET /api/summary/z7T1pCxgvlA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50386 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-14 13:55:21.493722] 開始檢查 YouTube 頻道更新...
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+INFO:     127.0.0.1:50395 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50395 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: my_9KIDwv9c
+INFO:     127.0.0.1:50395 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50395 - "GET /api/videos HTTP/1.1" 200 OK
+沒有發現新影片。
+[2026-01-14 13:55:25.908950] 檢查完成。
+
+INFO:     127.0.0.1:50395 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50395 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26200]
+./run_prod.sh: line 19: 26200 Terminated: 15          python dashboard_server.py

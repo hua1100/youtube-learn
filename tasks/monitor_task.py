@@ -83,9 +83,11 @@ def is_shorts(video_id):
     except:
         return False
 
-def get_latest_video(channel_id):
+def get_new_videos(channel_id, last_video_link=None):
     """
-    使用 RSS Feed 獲取最新影片資訊，並過濾掉 Shorts
+    使用 RSS Feed 獲取「新」影片列表。
+    如果提供了 last_video_link，回傳該連結之後的所有影片。
+    如果沒提供 (Init)，只回傳最新的一部。
     """
     rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
@@ -95,7 +97,9 @@ def get_latest_video(channel_id):
         root = ET.fromstring(response.content)
         ns = {'atom': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
         
-        # Iterate through entries to find the first non-Short video
+        found_videos = []
+
+        # Iterate through entries
         for entry in root.findall('atom:entry', ns):
             video_id_elem = entry.find('yt:videoId', ns)
             video_id = video_id_elem.text if video_id_elem is not None else None
@@ -103,13 +107,18 @@ def get_latest_video(channel_id):
             if not video_id:
                 continue
 
-            # Check if it is a Short
+            link = entry.find('atom:link', ns).attrib['href']
+            
+            # 1. Check stop condition (Hit previous video)
+            if last_video_link and link == last_video_link:
+                break
+                
+            # 2. Check Shorts
             if is_shorts(video_id):
                 print(f"⚠️ 跳過 Shorts: {video_id}")
                 continue
 
             title = entry.find('atom:title', ns).text
-            link = entry.find('atom:link', ns).attrib['href']
             published = entry.find('atom:published', ns).text
             
             # Extract Channel Title
@@ -120,7 +129,7 @@ def get_latest_video(channel_id):
                 if name_elem is not None:
                     channel_title = name_elem.text
 
-            return {
+            video_info = {
                 'id': video_id,
                 'title': title,
                 'link': link,
@@ -128,10 +137,17 @@ def get_latest_video(channel_id):
                 'channel_title': channel_title
             }
             
-        return None
+            found_videos.append(video_info)
+            
+            # 3. If Init mode (no last_video_link), we only want the LATEST single healthy video
+            if last_video_link is None:
+                break
+                
+        return found_videos
+        
     except Exception as e:
         print(f"❌ 獲取 RSS {channel_id} 時發生錯誤: {e}")
-        return None
+        return []
 
 def update_video_db(video_info):
     """
@@ -167,6 +183,7 @@ def check_updates():
     new_video_entries = []
     
     for url in CHANNELS:
+        print(f"👀 正在檢查: {url}")
         # 如果 state 中沒有緩存 channel_id，則重新獲取
         if url in state and 'channel_id' in state[url]:
             channel_id = state[url]['channel_id']
@@ -179,13 +196,18 @@ def check_updates():
                 state_updated = True
         
         if channel_id:
-            video_info = get_latest_video(channel_id)
-            if video_info:
-                last_video_link = state.get(url, {}).get('last_video_link')
-                current_video_link = video_info['link']
+            last_video_link = state.get(url, {}).get('last_video_link')
+            
+            # Get list of new videos
+            new_videos_list = get_new_videos(channel_id, last_video_link)
+            
+            if new_videos_list:
+                print(f"🔎 發現 {len(new_videos_list)} 部新影片 (Channel: {url})")
                 
-                # 檢查是否有更新
-                if last_video_link != current_video_link:
+                # Process from Oldest to Newest to maintain chronological order in state/logs
+                for video_info in reversed(new_videos_list):
+                    current_video_link = video_info['link']
+                    
                     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     entry = f"[{timestamp}] New Video: {video_info['title']} - {video_info['link']}\n"
                     new_video_entries.append(entry)
