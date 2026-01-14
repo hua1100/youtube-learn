@@ -10,6 +10,10 @@ npm run build
 cd ..
 
 echo "✅ Frontend Build Complete."
+
+# Start Background Scheduler
+./run_background.sh
+
 echo "🚀 Starting Production Server..."
 echo "🌐 Open http://localhost:8000 in your browser."
 
