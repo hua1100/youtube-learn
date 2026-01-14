@@ -16,6 +16,19 @@ from tasks.monitor_task import check_updates
 # Initialize Scheduler
 scheduler = BackgroundScheduler()
 
+# Global state for update status (Must be defined before lifespan uses run_update_wrapper)
+is_update_running = False
+
+def run_update_wrapper():
+    global is_update_running
+    is_update_running = True
+    try:
+        check_updates()
+    except Exception as e:
+        print(f"Update failed: {e}")
+    finally:
+        is_update_running = False
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup: Start scheduler
@@ -30,10 +43,6 @@ async def lifespan(app: FastAPI):
     scheduler.shutdown()
 
 app = FastAPI(lifespan=lifespan)
-
-# Mount static files *after* API routes (but we declare here, order matters for catch-all)
-# Actually, mount api first implicitly by definition.
-# We will mount "/" at the end of the file or ensure API routes take precedence (FastAPI handles this naturally if mounted at root)
 
 # Config
 VIDEOS_FILE = "videos.json"
@@ -55,6 +64,7 @@ class Video(BaseModel):
     published: Optional[str] = None
     channel_title: Optional[str] = None
     has_summary: bool = False
+    is_read: bool = False
 
 @app.get("/api/videos", response_model=List[dict])
 def get_videos():
@@ -128,18 +138,33 @@ def get_summary(video_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# Global state for update status
-is_update_running = False
-
-def run_update_wrapper():
-    global is_update_running
-    is_update_running = True
+@app.post("/api/videos/{video_id}/toggle_read")
+def toggle_read(video_id: str):
+    if not os.path.exists(VIDEOS_FILE):
+        raise HTTPException(status_code=404, detail="No videos database found")
+    
     try:
-        check_updates()
+        updated_video = None
+        with open(VIDEOS_FILE, 'r', encoding='utf-8') as f:
+            videos = json.load(f)
+        
+        for v in videos:
+            if v['id'] == video_id:
+                # Toggle current state, default to False if missing
+                current_state = v.get('is_read', False)
+                v['is_read'] = not current_state
+                updated_video = v
+                break
+        
+        if updated_video:
+            with open(VIDEOS_FILE, 'w', encoding='utf-8') as f:
+                json.dump(videos, f, indent=2, ensure_ascii=False)
+            return updated_video
+        else:
+            raise HTTPException(status_code=404, detail="Video not found")
+            
     except Exception as e:
-        print(f"Update failed: {e}")
-    finally:
-        is_update_running = False
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/status")
 def get_status():

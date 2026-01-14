@@ -4,6 +4,9 @@ import { Play, Calendar, Tag, ChevronDown, CheckCircle2 } from 'lucide-react';
 import clsx from 'clsx';
 
 const VideoCard = ({ video, onViewSummary }) => {
+    const [isRead, setIsRead] = useState(video.is_read || false);
+    const [isLoading, setIsLoading] = useState(false);
+
     // Gradient generator for tags
     const getTagStyle = (index) => {
         const styles = [
@@ -15,11 +18,34 @@ const VideoCard = ({ video, onViewSummary }) => {
         return styles[index % styles.length];
     };
 
+    const handleToggleRead = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsLoading(true);
+        try {
+            const response = await fetch(`http://localhost:8000/api/videos/${video.id}/toggle_read`, {
+                method: 'POST'
+            });
+            if (response.ok) {
+                setIsRead(!isRead);
+            }
+        } catch (error) {
+            console.error("Failed to toggle read status", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <motion.div
             layout
             transition={{ layout: { duration: 0.3 } }}
-            className="group relative bg-white rounded-xl border border-slate-100 shadow-soft hover:shadow-soft-hover transition-all duration-300 overflow-hidden hover:-translate-y-1"
+            className={clsx(
+                "group relative bg-white rounded-xl border shadow-soft transition-all duration-300 overflow-hidden",
+                isRead
+                    ? "border-slate-100 opacity-60 grayscale-[0.5] hover:opacity-100 hover:grayscale-0 hover:-translate-y-1"
+                    : "border-slate-100 hover:shadow-soft-hover hover:-translate-y-1"
+            )}
         >
             <div className="p-5">
                 {/* Header Section */}
@@ -36,21 +62,42 @@ const VideoCard = ({ video, onViewSummary }) => {
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-lg font-bold text-slate-900 leading-tight group-hover:text-indigo-600 transition-colors line-clamp-2">
+                        <h3 className={clsx(
+                            "text-lg font-bold leading-tight transition-colors line-clamp-2",
+                            isRead ? "text-slate-500 decoration-slate-300" : "text-slate-900 group-hover:text-indigo-600"
+                        )}>
                             <a href={video.link} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-indigo-200 underline-offset-2">
                                 {video.title}
                             </a>
                         </h3>
                     </div>
-                    {/* Play Button Icon */}
-                    <a
-                        href={video.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm"
-                    >
-                        <Play size={18} fill="currentColor" className="ml-0.5" />
-                    </a>
+
+                    <div className="flex gap-2 shrink-0">
+                        {/* Done Button */}
+                        <button
+                            onClick={handleToggleRead}
+                            disabled={isLoading}
+                            title={isRead ? "Mark as Unread" : "Mark as Done"}
+                            className={clsx(
+                                "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm border",
+                                isRead
+                                    ? "bg-emerald-100 text-emerald-600 border-emerald-200"
+                                    : "bg-white text-slate-400 border-slate-100 hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200"
+                            )}
+                        >
+                            <CheckCircle2 size={18} className={clsx("transition-transform duration-300", isLoading && "animate-pulse")} />
+                        </button>
+
+                        {/* Play Button Icon */}
+                        <a
+                            href={video.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm"
+                        >
+                            <Play size={18} fill="currentColor" className="ml-0.5" />
+                        </a>
+                    </div>
                 </div>
 
                 {/* Video Meta */}
@@ -88,7 +135,10 @@ const VideoCard = ({ video, onViewSummary }) => {
             </div>
 
             {/* Decorative Bottom Line */}
-            <div className="h-1 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className={clsx(
+                "h-1 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-opacity duration-300",
+                isRead ? "opacity-0" : "opacity-0 group-hover:opacity-100"
+            )}></div>
         </motion.div>
     );
 };

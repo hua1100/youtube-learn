@@ -11,6 +11,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from tasks.summarizer import summarize_video, save_summary
+from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, VideoUnavailable
 
 STATE_FILE = "monitor_state.json"
 OUTPUT_FILE = "new_videos.txt"
@@ -46,10 +47,10 @@ def get_channel_id_from_url(url):
         response.raise_for_status()
         
         patterns = [
-            r'itemprop="channelId" content="([^"]+)"',
-            r'"channelId":"([^"]+)"',
             r'"externalId":"([^"]+)"',
             r'"browseId":"(UC[^"]+)"',
+            r'itemprop="channelId" content="([^"]+)"',
+            r'"channelId":"([^"]+)"',
         ]
         
         for pattern in patterns:
@@ -81,6 +82,27 @@ def is_shorts(video_id):
             # Ambiguous case, assume False or check handling
             return False
     except:
+        return False
+
+def is_premiere(video_id):
+    """
+    Check if a video is a Premiere (not yet available).
+    Relies on YouTubeTranscriptApi throwing a specific error for premieres.
+    """
+    try:
+        # Just try to fetch transcripts.
+        yt_api = YouTubeTranscriptApi()
+        yt_api.fetch(video_id, languages=['en']) # Language doesn't matter for checking availability
+        return False
+    except VideoUnavailable as e:
+        if "Premieres in" in str(e):
+             return True
+        return False
+    except Exception as e:
+        # Check string for generic exceptions too, as seen in tests
+        if "Premieres in" in str(e):
+            return True
+        # Other errors (e.g. no transcripts but video exists) are not "Premiere" state
         return False
 
 def get_new_videos(channel_id, last_video_link=None):
@@ -116,6 +138,11 @@ def get_new_videos(channel_id, last_video_link=None):
             # 2. Check Shorts
             if is_shorts(video_id):
                 print(f"⚠️ 跳過 Shorts: {video_id}")
+                continue
+
+            # 3. Check Premiere
+            if is_premiere(video_id):
+                print(f"⏳ 影片尚在首播預告中，跳過: {video_id}")
                 continue
 
             title = entry.find('atom:title', ns).text

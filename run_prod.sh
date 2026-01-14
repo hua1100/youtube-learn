@@ -20,4 +20,4 @@ echo "🌐 Open http://localhost:8000 in your browser."
 # Install Python deps if needed (optional check)
 # pip install -r requirements.txt
 
-python dashboard_server.py
+uv run dashboard_server.py

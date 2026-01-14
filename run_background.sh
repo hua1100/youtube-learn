@@ -12,7 +12,7 @@ fi
 
 echo "🚀 Starting Scheduler in background..."
 export PYTHONUNBUFFERED=1
-nohup uv run scheduler.py > scheduler.log 2>&1 &
+nohup uv run scheduler.py >> scheduler.log 2>&1 &
 
 # 儲存 Process ID 以便之後停止
 echo $! > scheduler.pid

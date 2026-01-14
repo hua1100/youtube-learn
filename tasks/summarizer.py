@@ -36,16 +36,16 @@ PROMPT_TEMPLATE = """
 
 def get_transcript_text(video_id):
     try:
-        # 使用新版 API (v1.2.3+ or similar variant installed)
-        # 需要實例化
+        # 使用新版 API (v1.2.3+ or similar variant)
+        # 根據 debug，它是 class 且有 fetch 方法
         yt_api = YouTubeTranscriptApi()
-        # 調用 fetch
         transcript_obj = yt_api.fetch(video_id, languages=['zh-TW', 'zh', 'en'])
         
         # 轉換為純文字
         if transcript_obj:
-            # 假設 transcript_obj 是可迭代的 FetchedTranscriptSnippet 對象
-            full_text = " ".join([snippet['text'] for snippet in transcript_obj])
+            # 根據報錯 'FetchedTranscriptSnippet object is not subscriptable'
+            # 這代表回傳的是物件列表，要用 .text 屬性存取
+            full_text = " ".join([snippet.text for snippet in transcript_obj])
             return full_text
         return None
     except Exception as e:

@@ -58,3 +58,112 @@ INFO:     127.0.0.1:56799 - "GET /api/videos HTTP/1.1" 200 OK
 INFO:     127.0.0.1:56808 - "GET /api/summary/sDyTcXXn1AU HTTP/1.1" 200 OK
 INFO:     127.0.0.1:56915 - "GET / HTTP/1.1" 304 Not Modified
 INFO:     127.0.0.1:56915 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57031 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-14 17:30:57.362042] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+INFO:     127.0.0.1:57031 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57031 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: my_9KIDwv9c
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:57031 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57031 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-14 17:31:01.984551] 檢查完成。
+
+INFO:     127.0.0.1:57053 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57053 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58832 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58832 - "GET /assets/index-CPRBtMv2.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58832 - "GET /assets/index-ztIq3Op3.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58832 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:58833 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58846 - "GET /api/summary/1pjiS-t_O0w HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58867 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-14 19:28:16.532878] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+INFO:     127.0.0.1:58867 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58867 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:58874 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58874 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: my_9KIDwv9c
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-14 19:28:22.457923] 檢查完成。
+
+INFO:     127.0.0.1:58874 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58874 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59689 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59689 - "GET /assets/index-CPRBtMv2.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59691 - "GET /assets/index-ztIq3Op3.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59695 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59693 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59702 - "GET /api/summary/k8cnVCMYmNc HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-14 22:27:51 CST)" was missed by 3:14:40.665992
+INFO:     127.0.0.1:59743 - "GET /api/summary/k8cnVCMYmNc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59772 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-14 21:43:27.922904] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:59772 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59772 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+INFO:     127.0.0.1:59781 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59781 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: my_9KIDwv9c
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:59781 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59781 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-14 21:43:34.323864] 檢查完成。
+
+INFO:     127.0.0.1:59781 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59781 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59815 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59997 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59997 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60006 - "GET /api/summary/2hgjgycOU_0 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60019 - "GET /api/summary/2hgjgycOU_0 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60341 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60341 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60348 - "GET /api/summary/2hgjgycOU_0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60594 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60594 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60604 - "GET /api/summary/VSdV-AdSlis HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60611 - "GET /api/summary/sDyTcXXn1AU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60629 - "GET /api/summary/Jty4s9-Jb78 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/summary/VSdV-AdSlis HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60743 - "GET /api/summary/VSdV-AdSlis HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60900 - "GET /api/summary/Jty4s9-Jb78 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60932 - "GET /api/summary/2HNSG990Ew8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60934 - "GET /api/summary/OGCG_QkCcZo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60945 - "GET /api/summary/Jty4s9-Jb78 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60959 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60959 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61025 - "GET /api/summary/96G7FLab8xc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61052 - "GET /api/summary/HY_JyxAZsiE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61070 - "GET /api/summary/-cKUW6n8hBU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61089 - "GET /api/summary/rcsliSIy_YU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61154 - "GET /api/summary/2HNSG990Ew8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61167 - "GET /api/summary/2hgjgycOU_0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61181 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61200 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61200 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61240 - "GET /api/summary/xz0-brt56L8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61329 - "GET /api/summary/mdEh4lBO_R0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61334 - "GET /api/summary/mdEh4lBO_R0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61374 - "GET /api/summary/1pjiS-t_O0w HTTP/1.1" 200 OK
+./run_prod.sh: line 19: 31610 Killed: 9               python dashboard_server.py
