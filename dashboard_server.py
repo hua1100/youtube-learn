@@ -22,7 +22,7 @@ async def lifespan(app: FastAPI):
     print("⏰ Starting Scheduler...")
     # Schedule check_updates every 1 hour (3600 seconds)
     # Using run_update_wrapper to ensure state consistency
-    scheduler.add_job(run_update_wrapper, 'interval', hours=1, id='check_updates_job')
+    scheduler.add_job(run_update_wrapper, 'interval', hours=4, id='check_updates_job')
     scheduler.start()
     yield
     # Shutdown: Stop scheduler
