@@ -157,6 +157,34 @@ def refresh_data(background_tasks: BackgroundTasks):
     background_tasks.add_task(run_update_wrapper)
     return {"status": "Update started", "message": "The system is checking for updates in the background."}
 
+@app.post("/api/reset")
+def reset_system():
+    """
+    DANGER: Clears all data to allow full re-ingestion.
+    """
+    global is_update_running
+    if is_update_running:
+        raise HTTPException(status_code=400, detail="Cannot reset while update is running.")
+
+    # Files to remove
+    files_to_remove = [VIDEOS_FILE, "monitor_state.json", "new_videos.txt"]
+    
+    # Remove summary files
+    for f in os.listdir("."):
+        if f.startswith("summary_") and f.endswith(".md"):
+            files_to_remove.append(f)
+
+    deleted = []
+    for f in files_to_remove:
+        if os.path.exists(f):
+            try:
+                os.remove(f)
+                deleted.append(f)
+            except Exception as e:
+                print(f"Error removing {f}: {e}")
+                
+    return {"status": "System Reset", "deleted_files": deleted}
+
 # Mount Frontend Static Files
 # Ensure this is after API routes so they are processed first
 if os.path.exists("dashboard/dist"):

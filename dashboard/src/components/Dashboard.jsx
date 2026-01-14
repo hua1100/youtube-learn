@@ -156,6 +156,24 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center gap-4 text-sm text-slate-500">
                     <button
+                        onClick={async () => {
+                            if (confirm("⚠️ Are you sure you want to RESET the entire system?\nThis will delete all videos, summaries, and history to force a full re-ingestion.")) {
+                                try {
+                                    await fetch('/api/reset', { method: 'POST' });
+                                    alert("System Reset Complete. Page will reload.");
+                                    window.location.reload();
+                                } catch (e) {
+                                    alert("Reset failed: " + e);
+                                }
+                            }
+                        }}
+                        className="inline-flex items-center gap-2 px-3 py-1.5 bg-red-white border border-red-200 text-red-600 rounded-lg text-xs font-semibold hover:bg-red-50 transition-all shadow-sm"
+                        title="Reset System & Clear Data"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trash-2"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /><line x1="10" x2="10" y1="11" y2="17" /><line x1="14" x2="14" y1="11" y2="17" /></svg>
+                        Reset
+                    </button>
+                    <button
                         onClick={triggerUpdate}
                         disabled={isUpdating}
                         className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold hover:bg-slate-50 hover:text-indigo-600 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
