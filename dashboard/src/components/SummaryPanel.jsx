@@ -164,7 +164,7 @@ const SummaryPanel = ({ video, onClose }) => {
                         {/* Content - Scrollable */}
                         <div
                             ref={contentRef}
-                            className="flex-1 overflow-y-auto p-6 scroll-smooth relative"
+                            className={`flex-1 p-6 scroll-smooth relative ${selection ? 'overflow-hidden' : 'overflow-y-auto'}`}
                         >
                             <div className="prose prose-slate prose-lg max-w-none 
                 prose-headings:font-bold prose-headings:text-slate-900 
@@ -209,39 +209,94 @@ const SummaryPanel = ({ video, onClose }) => {
 
                     {/* Text Selection Popup */}
                     {selection && (
-                        <div
-                            className="selection-popup fixed z-[60] bg-white rounded-lg shadow-xl border border-slate-200 p-3 w-80"
-                            style={{
-                                top: `${selection.y + 10}px`,
-                                left: `${selection.x}px`,
-                                transform: 'translateX(-50%)'
-                            }}
-                        >
-                            <div className="mb-2 text-xs font-semibold text-slate-500 flex items-center gap-1">
-                                <FilePlus size={14} />
-                                Add Note to Obsidian
-                            </div>
-                            <textarea
-                                value={note}
-                                onChange={(e) => setNote(e.target.value)}
-                                placeholder="Enter your thoughts..."
-                                className="w-full text-sm p-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-3 resize-none h-24"
-                                autoFocus
-                            />
-                            <button
-                                onClick={handleAddToObsidian}
-                                className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 rounded-md transition-colors"
-                            >
-                                <Save size={16} />
-                                Save to Obsidian
-                            </button>
-                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-slate-200 transform rotate-45"></div>
-                        </div>
+                        <Popup
+                            selection={selection}
+                            onSave={handleAddToObsidian}
+                            note={note}
+                            setNote={setNote}
+                        />
                     )}
                 </>
             )}
         </AnimatePresence>
     );
 };
+
+// Sub-component for smart positioning
+const Popup = ({ selection, onSave, note, setNote }) => {
+    const popupRef = useRef(null);
+    const [style, setStyle] = useState({
+        opacity: 0, // Hidden until positioned
+        left: selection.x,
+        top: selection.y
+    });
+
+    React.useEffect(() => {
+        if (!popupRef.current) return;
+
+        const popupRect = popupRef.current.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const gap = 8; // Closer gap as requested
+
+        let top = selection.y + gap;
+
+        // Check if popup goes off-screen bottom
+        if (top + popupRect.height > viewportHeight - 20) {
+            // Flip to top: rect.top - popupHeight - gap
+            // We need rect.top, but 'selection' only has 'y' (which is bottom) and 'x'
+            // We need to pass the height of the selection or original top to calculate 'above' perfectly.
+            // Let's approximate or update 'selection' state to include 'top'.
+
+            // For now, let's just shift it up by popupHeight + gap + line height (approx 24px)
+            // Better: Update parent to pass full rect info.
+            // But to fix quickly: just shift up by popupHeight + gap + 30px
+            top = selection.y - popupRect.height - gap - 24;
+        }
+
+        setStyle({
+            top: `${top}px`,
+            left: `${selection.x}px`,
+            transform: 'translateX(-50%)',
+            opacity: 1
+        });
+
+        // Lock body scroll
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = originalOverflow;
+        };
+    }, [selection]);
+
+    return (
+        <div
+            ref={popupRef}
+            className="selection-popup fixed z-[60] bg-white rounded-lg shadow-xl border border-slate-200 p-3 w-80"
+            style={style}
+        >
+            <div className="mb-2 text-xs font-semibold text-slate-500 flex items-center gap-1">
+                <FilePlus size={14} />
+                Add Note to Obsidian
+            </div>
+            <textarea
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                placeholder="Enter your thoughts..."
+                className="w-full text-sm p-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-3 resize-none h-24"
+                autoFocus
+            />
+            <button
+                onClick={onSave}
+                className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 rounded-md transition-colors"
+            >
+                <Save size={16} />
+                Save to Obsidian
+            </button>
+            {/* Arrow - simplified to be hidden or centered */}
+        </div>
+    );
+};
+
 
 export default SummaryPanel;
