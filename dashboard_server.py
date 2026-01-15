@@ -6,6 +6,7 @@ import os
 import sys
 from pydantic import BaseModel
 from typing import List, Optional
+from datetime import datetime
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -18,12 +19,14 @@ scheduler = BackgroundScheduler()
 
 # Global state for update status (Must be defined before lifespan uses run_update_wrapper)
 is_update_running = False
+last_update_result = None
 
 def run_update_wrapper():
-    global is_update_running
+    global is_update_running, last_update_result
     is_update_running = True
     try:
-        check_updates()
+        count = check_updates()
+        last_update_result = {"count": count, "timestamp": datetime.now().isoformat()}
     except Exception as e:
         print(f"Update failed: {e}")
     finally:
@@ -168,7 +171,10 @@ def toggle_read(video_id: str):
 
 @app.get("/api/status")
 def get_status():
-    return {"is_updating": is_update_running}
+    return {
+        "is_updating": is_update_running,
+        "last_update_result": last_update_result
+    }
 
 @app.post("/api/refresh")
 def refresh_data(background_tasks: BackgroundTasks):

@@ -100,6 +100,18 @@ const Dashboard = () => {
                     if (!statusData.is_updating) {
                         setIsUpdating(false);
                         clearInterval(intervalId);
+
+                        console.log("Update finished. Final Status:", statusData);
+
+                        // Check result
+                        if (statusData.last_update_result) {
+                            const { count } = statusData.last_update_result;
+                            if (count === 0) {
+                                alert("📭 沒有發現新影片\n所有的頻道都已經是最新的。");
+                            } else {
+                                alert(`🎉 發現 ${count} 部新影片！`);
+                            }
+                        }
                     }
                 } catch (e) {
                     console.error("Polling error", e);

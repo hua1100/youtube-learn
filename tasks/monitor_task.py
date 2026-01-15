@@ -268,6 +268,7 @@ def check_updates():
         print("沒有發現新影片。")
     
     print(f"[{datetime.now()}] 檢查完成。\n")
+    return len(new_video_entries)
 
 if __name__ == "__main__":
     # 用於測試

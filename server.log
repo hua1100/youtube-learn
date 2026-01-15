@@ -1625,3 +1625,267 @@ INFO:     Application shutdown complete.
 ⏰ Starting Scheduler...
 ⏰ Stopping Scheduler...
 ⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76914]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76941]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76966]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76977]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77000]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77030]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77035]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77042]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77046]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77066]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77111]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77127]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77166]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77180]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77188]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77217]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77249]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [77282]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:61580 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61580 - "GET /assets/index-BX4n7wT8.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61580 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61580 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61589 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 11:11:21.606952] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:61589 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61589 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-15 11:11:25.393955] 檢查完成。
+
+INFO:     127.0.0.1:61589 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61589 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61604 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 11:11:35.427875] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:61609 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-15 11:11:38.960762] 檢查完成。
+
+INFO:     127.0.0.1:61609 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61821 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61821 - "GET /assets/index-MGN4Wrid.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61823 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61823 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61821 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61833 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61835 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61835 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 11:16:50.651534] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:61865 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61865 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-15 11:16:53.496515] 檢查完成。
+
+INFO:     127.0.0.1:61865 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61865 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77282]
+⚠️  Server crashed/stopped with exit code: 143
+INFO:     Started server process [77698]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:64309 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64331 - "GET /assets/index-MGN4Wrid.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64329 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64309 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64329 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:64309 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64363 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 11:25:57.057824] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:64363 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64363 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-15 11:26:00.731713] 檢查完成。
+
+INFO:     127.0.0.1:64363 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64363 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64435 - "GET /api/summary/96G7FLab8xc HTTP/1.1" 200 OK
