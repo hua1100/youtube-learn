@@ -167,3 +167,1461 @@ INFO:     127.0.0.1:61329 - "GET /api/summary/mdEh4lBO_R0 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:61334 - "GET /api/summary/mdEh4lBO_R0 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:61374 - "GET /api/summary/1pjiS-t_O0w HTTP/1.1" 200 OK
 ./run_prod.sh: line 19: 31610 Killed: 9               python dashboard_server.py
+INFO:     Started server process [75058]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75080]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75113]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75134]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75148]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75158]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75183]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75195]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75208]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75220]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75234]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75258]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75269]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75278]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75289]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75299]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75323]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75333]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75342]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75351]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75360]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75383]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75392]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75400]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75409]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75422]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75431]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75455]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75464]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75473]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75487]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75521]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75530]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75540]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75557]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75566]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75575]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75583]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75592]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75600]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75609]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75617]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75626]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75638]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75647]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75655]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75677]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75687]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75697]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75705]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75714]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75722]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75731]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75739]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75756]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75766]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75775]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75784]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75793]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75801]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75810]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75818]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75830]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75838]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75850]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75869]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75879]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75889]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75897]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75907]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75916]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75936]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75944]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75953]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75962]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75971]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75983]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [75991]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76010]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76027]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76040]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76050]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76058]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76070]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76099]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76125]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76136]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76144]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76153]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76162]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76172]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76181]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76189]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76200]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76209]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76219]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76227]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76236]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76246]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76255]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76265]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76274]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76283]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76292]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76303]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76312]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76321]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76331]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76341]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76350]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76358]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76370]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76379]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76389]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76402]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76410]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76421]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76433]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76443]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76456]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76464]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76473]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76481]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76491]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76500]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76509]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76519]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76527]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76539]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76548]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76558]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76568]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76577]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76587]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76596]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76605]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76613]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76628]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76656]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76669]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76678]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76703]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76716]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76725]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76734]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76743]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76767]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76776]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76786]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76794]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76804]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76828]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76837]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76846]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76854]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76863]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76886]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76895]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
+INFO:     Started server process [76905]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8000): [errno 48] address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+⏰ Starting Scheduler...
+⏰ Stopping Scheduler...
+⚠️  Server crashed/stopped with exit code: 1
