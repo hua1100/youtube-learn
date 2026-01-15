@@ -1,11 +1,102 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar, User, Tag, ExternalLink } from 'lucide-react';
+import { X, Calendar, User, Tag, ExternalLink, FilePlus, Save } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import clsx from 'clsx';
 
 const SummaryPanel = ({ video, onClose }) => {
+    const [selection, setSelection] = useState(null);
+    const [note, setNote] = useState('');
+    const contentRef = useRef(null);
+
+    // Initial check for selection clearing when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (selection && !e.target.closest('.selection-popup')) {
+                setSelection(null);
+                // Clear highlights if we click away without saving
+                CSS.highlights?.delete('obsidian-selection');
+            }
+        };
+
+        const handleMouseUpGlobal = (e) => {
+            // 1. Get Selection
+            const sel = window.getSelection();
+
+            // 2. Validate Selection presence and non-empty
+            if (!sel || sel.isCollapsed || sel.toString().trim().length === 0) {
+                return;
+            }
+
+            // 3. Validate Context (Is it inside our contentRef?)
+            if (contentRef.current && !contentRef.current.contains(sel.anchorNode)) {
+                return;
+            }
+
+            // 4. If we are clicking inside the popup, do not reset/move it
+            if (e.target.closest('.selection-popup')) {
+                return;
+            }
+
+            // 5. Calculate position
+            const range = sel.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+
+            // Check if rect is visible/valid
+            if (rect.width === 0 || rect.height === 0) return;
+
+            // --- Highlight API Logic ---
+            if (CSS.highlights) {
+                const highlight = new Highlight(range);
+                CSS.highlights.set('obsidian-selection', highlight);
+            }
+
+            setSelection({
+                text: sel.toString().trim(),
+                x: rect.left + rect.width / 2,
+                y: rect.bottom,
+            });
+            setNote('');
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('pointerup', handleMouseUpGlobal);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('pointerup', handleMouseUpGlobal);
+        };
+    }, [selection]);
+
+
+
+    const handleAddToObsidian = () => {
+        if (!selection) return;
+
+        // Sanitize video title for filename (remove illegal chars for files)
+        const safeTitle = (video.title || 'Untitled')
+            .replace(/[\\/:*?"<>|]/g, '-') // Replace system reserved chars
+            .replace(/\s+/g, ' ')           // Collapse whitespace
+            .trim();
+
+        // Add original link for reference
+        const content = `> ${selection.text}\n\n${note}\n\n[Original Video](${video.link})`;
+
+        // Use title + short date to ensure uniqueness but readability
+        const dateStr = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+        const filename = `${safeTitle} - ${dateStr}`;
+
+        // Construct Obsidian URI
+        const uri = `obsidian://new?name=${encodeURIComponent(filename)}&content=${encodeURIComponent(content)}`;
+
+        window.location.href = uri;
+
+        // Clean up
+        setSelection(null);
+        window.getSelection().removeAllRanges();
+        CSS.highlights?.delete('obsidian-selection');
+    };
     return (
         <AnimatePresence>
             {video && (
@@ -71,7 +162,10 @@ const SummaryPanel = ({ video, onClose }) => {
                         </div>
 
                         {/* Content - Scrollable */}
-                        <div className="flex-1 overflow-y-auto p-6 scroll-smooth">
+                        <div
+                            ref={contentRef}
+                            className="flex-1 overflow-y-auto p-6 scroll-smooth relative"
+                        >
                             <div className="prose prose-slate prose-lg max-w-none 
                 prose-headings:font-bold prose-headings:text-slate-900 
                 prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-slate-100
@@ -112,6 +206,38 @@ const SummaryPanel = ({ video, onClose }) => {
                             <div className="h-10"></div>
                         </div>
                     </motion.div>
+
+                    {/* Text Selection Popup */}
+                    {selection && (
+                        <div
+                            className="selection-popup fixed z-[60] bg-white rounded-lg shadow-xl border border-slate-200 p-3 w-80"
+                            style={{
+                                top: `${selection.y + 10}px`,
+                                left: `${selection.x}px`,
+                                transform: 'translateX(-50%)'
+                            }}
+                        >
+                            <div className="mb-2 text-xs font-semibold text-slate-500 flex items-center gap-1">
+                                <FilePlus size={14} />
+                                Add Note to Obsidian
+                            </div>
+                            <textarea
+                                value={note}
+                                onChange={(e) => setNote(e.target.value)}
+                                placeholder="Enter your thoughts..."
+                                className="w-full text-sm p-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-3 resize-none h-24"
+                                autoFocus
+                            />
+                            <button
+                                onClick={handleAddToObsidian}
+                                className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 rounded-md transition-colors"
+                            >
+                                <Save size={16} />
+                                Save to Obsidian
+                            </button>
+                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-slate-200 transform rotate-45"></div>
+                        </div>
+                    )}
                 </>
             )}
         </AnimatePresence>

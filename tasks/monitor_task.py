@@ -22,7 +22,12 @@ CHANNELS = [
     "https://www.youtube.com/@Google/videos",
     "https://www.youtube.com/@ycombinator",
     "https://www.youtube.com/@a16z",
-    "https://www.youtube.com/@aiDotEngineer"
+    "https://www.youtube.com/@aiDotEngineer",
+    "https://www.youtube.com/@EveryInc",
+    "https://www.youtube.com/@AcquiredFM",
+    "https://www.youtube.com/@howiaipodcast",
+    "https://www.youtube.com/@hamelhusain7140",
+    "https://www.youtube.com/@StephenGPope"
 ]
 
 def load_state():
