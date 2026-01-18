@@ -2039,3 +2039,720 @@ INFO:     127.0.0.1:58670 - "GET /api/summary/0kARDVL2nZg HTTP/1.1" 200 OK
 INFO:     127.0.0.1:58780 - "GET /api/summary/2hgjgycOU_0 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:58784 - "GET /api/summary/0kARDVL2nZg HTTP/1.1" 200 OK
 INFO:     127.0.0.1:58811 - "GET /api/summary/0kARDVL2nZg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59608 - "GET /api/summary/rcsliSIy_YU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59787 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59789 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59799 - "GET /api/summary/jiGDzy0sxOI HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60013 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60015 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60018 - "GET /api/summary/xeZDHGjG5zM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61116 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 18:41:15.828161] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:61121 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61125 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+INFO:     127.0.0.1:61133 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61136 - "GET /api/videos HTTP/1.1" 200 OK
+沒有發現新影片。
+[2026-01-15 18:41:19.983103] 檢查完成。
+
+INFO:     127.0.0.1:61139 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61142 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61146 - "GET /api/summary/0xxo8YLpbdY HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61150 - "GET /api/summary/-cKUW6n8hBU HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61161 - "POST /api/videos/0xxo8YLpbdY/toggle_read HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61165 - "POST /api/videos/0kARDVL2nZg/toggle_read HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61169 - "GET /api/summary/1GcYL44bmVw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61211 - "POST /api/videos/1GcYL44bmVw/toggle_read HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61213 - "POST /api/videos/0kARDVL2nZg/toggle_read HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61220 - "GET /api/summary/z7T1pCxgvlA HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-15 23:17:33 CST)" was missed by 0:37:52.532425
+INFO:     127.0.0.1:62180 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 19:57:04.363609] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:62187 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62190 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62194 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62197 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-15 19:57:09.438194] 檢查完成。
+
+INFO:     127.0.0.1:62205 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62208 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62702 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62704 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62708 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-15 23:05:52.103619] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+INFO:     127.0.0.1:62718 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62724 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62732 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62735 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: hnx_-v9HDZA
+⚠️ 跳過 Shorts: Ak2aK4tyuws
+INFO:     127.0.0.1:62743 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62746 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: K4rMYsAsSEI
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@LennysPodcast)
+[2026-01-15 23:05:59] New Video: Human skills are the new scarcity in the AI era | Sam Lessin - https://www.youtube.com/watch?v=KtKJ3A6DWTs
+🤖 正在為影片產生摘要: KtKJ3A6DWTs - Human skills are the new scarcity in the AI era | Sam Lessin...
+INFO:     127.0.0.1:62754 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62757 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 逐字稿過長，進行截斷...
+INFO:     127.0.0.1:62762 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62765 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62772 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62775 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62786 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62790 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62795 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62798 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62803 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62806 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62810 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62813 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62816 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62819 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62826 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62829 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62834 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62837 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62842 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62845 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62849 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62852 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62856 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62859 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62862 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62865 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62872 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62875 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62878 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62881 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62884 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_KtKJ3A6DWTs.md
+📚 立即新增影片到資料庫: Human skills are the new scarcity in the AI era | Sam Lessin
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+👀 正在檢查: https://www.youtube.com/@a16z
+INFO:     127.0.0.1:62892 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62895 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+📝 寫入 1 筆新影片紀錄到 new_videos.txt
+[2026-01-15 23:06:34.444481] 檢查完成。
+
+INFO:     127.0.0.1:62899 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62902 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62919 - "GET /api/summary/KtKJ3A6DWTs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63834 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-16 10:39:00.873186] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@googleantigravity)
+[2026-01-16 10:39:02] New Video: How to better understand, follow, and collaborate with the agent - https://www.youtube.com/watch?v=eqLqAMDgL5U
+🤖 正在為影片產生摘要: eqLqAMDgL5U - How to better understand, follow, and collaborate with the agent...
+INFO:     127.0.0.1:63842 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63845 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63852 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63859 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63862 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63865 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63868 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63871 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63874 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63877 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63880 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63884 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63887 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63892 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63895 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_eqLqAMDgL5U.md
+📚 立即新增影片到資料庫: How to better understand, follow, and collaborate with the agent
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:63900 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63903 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63908 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63911 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: giZGg6ZWLwo
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@Google/videos)
+[2026-01-16 10:39:20] New Video: Hashem Al-Ghaili on AI Filmmaking with Flow | In the Flow - https://www.youtube.com/watch?v=Bb0oFbZ35qM
+🤖 正在為影片產生摘要: Bb0oFbZ35qM - Hashem Al-Ghaili on AI Filmmaking with Flow | In the Flow...
+INFO:     127.0.0.1:63916 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63919 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63922 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63925 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63928 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63931 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63934 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63937 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63940 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63943 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63949 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63952 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63956 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63959 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_Bb0oFbZ35qM.md
+📚 立即新增影片到資料庫: Hashem Al-Ghaili on AI Filmmaking with Flow | In the Flow
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:63964 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63967 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+📝 寫入 2 筆新影片紀錄到 new_videos.txt
+[2026-01-16 10:39:38.251382] 檢查完成。
+
+INFO:     127.0.0.1:63972 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63975 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63981 - "GET /api/summary/eqLqAMDgL5U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51577 - "GET /api/summary/Bb0oFbZ35qM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51592 - "GET /api/summary/eqLqAMDgL5U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51601 - "GET /api/summary/KtKJ3A6DWTs HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-16 15:17:33 CST)" was missed by 3:52:30.908525
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-16 23:17:33 CST)" was missed by 2:32:53.026347
+[2026-01-16 15:17:33.222547] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-16 15:17:35.858763] 檢查完成。
+
+[2026-01-16 23:17:33.220136] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-16 23:17:37.405267] 檢查完成。
+
+[2026-01-17 03:17:33.221355] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-17 03:17:38.156525] 檢查完成。
+
+[2026-01-17 07:17:33.227901] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-17 07:17:37.957131] 檢查完成。
+
+INFO:     127.0.0.1:54827 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-17 21:23:12.479243] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: GCj3R-GbGNc
+INFO:     127.0.0.1:54833 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54837 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:54847 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54851 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:54856 - "GET /api/summary/mwzk2rlwtZE HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54859 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54862 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+INFO:     127.0.0.1:54866 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54869 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-17 21:23:20.714426] 檢查完成。
+
+INFO:     127.0.0.1:54873 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54876 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55204 - "GET /api/summary/Bb0oFbZ35qM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55286 - "GET /api/summary/mwzk2rlwtZE HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55572 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55574 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55577 - "GET /api/summary/mwzk2rlwtZE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55633 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55635 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55639 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-17 21:43:13.190759] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: GCj3R-GbGNc
+INFO:     127.0.0.1:55646 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55649 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55656 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55659 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+INFO:     127.0.0.1:55663 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55666 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:55671 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55674 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:55679 - "GET /api/status HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+INFO:     127.0.0.1:55682 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-17 21:43:23.675397] 檢查完成。
+
+INFO:     127.0.0.1:55687 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55690 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58799 - "GET /api/summary/mwzk2rlwtZE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59211 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-17 23:26:57.607541] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: GCj3R-GbGNc
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+沒有發現新影片。
+[2026-01-17 23:27:13.421030] 檢查完成。
+
+INFO:     127.0.0.1:59243 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59247 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59249 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59253 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59255 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59258 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59261 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59264 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59267 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59270 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59279 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59283 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59286 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59289 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59292 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59310 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59312 - "GET /api/videos HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-18 03:17:33 CST)" was missed by 0:47:08.792686
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77698]
+INFO:     Started server process [69229]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [69229]
+INFO:     Started server process [69537]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:61747 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61747 - "GET /assets/index-MGN4Wrid.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61747 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61752 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61747 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61756 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-18 14:52:21.622286] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+❌ 獲取 RSS UC6t1O76G0jYXOAoYCm153dA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+❌ 獲取 RSS UCK8sQmJBp8GCxrOtXWBpyEA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCK8sQmJBp8GCxrOtXWBpyEA
+👀 正在檢查: https://www.youtube.com/@ycombinator
+❌ 獲取 RSS UCcefcZRL2oaA_uBNeo5UOWg 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg
+👀 正在檢查: https://www.youtube.com/@a16z
+❌ 獲取 RSS UCQ1VQj-37kl2yS_VUhfQHsw 時發生錯誤: 500 Server Error: Internal Server Error for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1VQj-37kl2yS_VUhfQHsw
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+❌ 獲取 RSS UCLKPca3kwwd-B59HNr-_lvA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA
+👀 正在檢查: https://www.youtube.com/@EveryInc
+❌ 獲取 RSS UCjIMtrzxYc0lblGhmOgC_CA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCjIMtrzxYc0lblGhmOgC_CA
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+INFO:     127.0.0.1:61768 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+INFO:     127.0.0.1:61768 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:61768 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+INFO:     127.0.0.1:61778 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+INFO:     127.0.0.1:61778 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: QB2RnIG18YE
+INFO:     127.0.0.1:61782 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61782 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: RtI3docFOYU
+INFO:     127.0.0.1:61782 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61782 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+INFO:     127.0.0.1:61782 - "GET /api/summary/mwzk2rlwtZE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61782 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61782 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VdNsre3CYD4
+INFO:     127.0.0.1:61788 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+❌ 獲取 RSS UCRYY7IEbkHLH_ScJCu9eWDQ 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCRYY7IEbkHLH_ScJCu9eWDQ
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+❌ 獲取 RSS UC__dUuqF5w4OnbW221JxmKg 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UC__dUuqF5w4OnbW221JxmKg
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+❌ 獲取 RSS UCIg2taLnC9X6LRP1k3kukOA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCIg2taLnC9X6LRP1k3kukOA
+沒有發現新影片。
+[2026-01-18 14:52:40.911715] 檢查完成。
+
+INFO:     127.0.0.1:61788 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [69537]
+INFO:     Started server process [69721]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:61862 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61862 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61862 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-18 14:55:17.751503] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+❌ 獲取 RSS UC6t1O76G0jYXOAoYCm153dA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+❌ 獲取 RSS UC_eVxIPHFZm7oF_gET0x-8Q 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UC_eVxIPHFZm7oF_gET0x-8Q
+👀 正在檢查: https://www.youtube.com/@Google/videos
+❌ 獲取 RSS UCK8sQmJBp8GCxrOtXWBpyEA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCK8sQmJBp8GCxrOtXWBpyEA
+👀 正在檢查: https://www.youtube.com/@ycombinator
+❌ 獲取 RSS UCcefcZRL2oaA_uBNeo5UOWg 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg
+👀 正在檢查: https://www.youtube.com/@a16z
+❌ 獲取 RSS UCQ1VQj-37kl2yS_VUhfQHsw 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1VQj-37kl2yS_VUhfQHsw
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+❌ 獲取 RSS UCLKPca3kwwd-B59HNr-_lvA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA
+👀 正在檢查: https://www.youtube.com/@EveryInc
+❌ 獲取 RSS UCjIMtrzxYc0lblGhmOgC_CA 時發生錯誤: 500 Server Error: Internal Server Error for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCjIMtrzxYc0lblGhmOgC_CA
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+❌ 獲取 RSS UCyFqFYfTW2VoIQKylJ04Rtw 時發生錯誤: 500 Server Error: Internal Server Error for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCyFqFYfTW2VoIQKylJ04Rtw
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:61878 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61878 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:61878 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61878 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+INFO:     127.0.0.1:61885 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61885 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+❌ 獲取 RSS UC__dUuqF5w4OnbW221JxmKg 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UC__dUuqF5w4OnbW221JxmKg
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+❌ 獲取 RSS UCIg2taLnC9X6LRP1k3kukOA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCIg2taLnC9X6LRP1k3kukOA
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+❌ 獲取 RSS UCrDwWp7EBBv4NwvScIpBDOA 時發生錯誤: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
+沒有發現新影片。
+[2026-01-18 14:55:24.968906] 檢查完成。
+
+INFO:     127.0.0.1:61885 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61885 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [69721]
+INFO:     Started server process [71097]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:62567 - "GET /api/health_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62676 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62676 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62695 - "GET /api/health_stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62695 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51649 - "GET /assets/index-MGN4Wrid.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51657 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-18 20:28:51.672234] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+INFO:     127.0.0.1:51657 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51657 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: DEtbsvm-Fhg
+INFO:     127.0.0.1:51662 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51662 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: GCj3R-GbGNc
+INFO:     127.0.0.1:51662 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51662 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:51662 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51662 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:51673 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51673 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+👀 正在檢查: https://www.youtube.com/@EveryInc
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+INFO:     127.0.0.1:51673 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51673 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+INFO:     127.0.0.1:51689 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51689 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+INFO:     127.0.0.1:51689 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51689 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:51689 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51689 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+INFO:     127.0.0.1:51695 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51695 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+INFO:     127.0.0.1:51695 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51695 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: QB2RnIG18YE
+INFO:     127.0.0.1:51700 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: RtI3docFOYU
+INFO:     127.0.0.1:51700 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+INFO:     127.0.0.1:51700 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+⚠️ 跳過 Shorts: VdNsre3CYD4
+INFO:     127.0.0.1:51707 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51707 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:51707 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51707 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:51712 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+INFO:     127.0.0.1:51712 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+INFO:     127.0.0.1:51712 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+INFO:     127.0.0.1:51719 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51719 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VhoLomysGho
+INFO:     127.0.0.1:51719 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51719 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VEdQRrgkw60
+INFO:     127.0.0.1:51724 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51724 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+INFO:     127.0.0.1:51724 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51724 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: cMtoCVbD7-4
+INFO:     127.0.0.1:51724 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51724 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: Rz8Rqn_cBTE
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@StephenGPope)
+[2026-01-18 20:29:41] New Video: Build A SaaS Startup With Claude Code (22-Min Crash Course) - https://www.youtube.com/watch?v=s47C9_qDvJs
+🤖 正在為影片產生摘要: s47C9_qDvJs - Build A SaaS Startup With Claude Code (22-Min Crash Course)...
+INFO:     127.0.0.1:51733 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51733 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51733 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51733 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51738 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51743 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51743 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51743 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51743 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51745 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51747 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51747 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51747 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51747 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51762 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_s47C9_qDvJs.md
+📚 立即新增影片到資料庫: Build A SaaS Startup With Claude Code (22-Min Crash Course)
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+INFO:     127.0.0.1:51769 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51769 - "GET /api/videos HTTP/1.1" 200 OK
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@anthropic-ai)
+[2026-01-18 20:30:12] New Video: AI on campus - https://www.youtube.com/watch?v=N5yJJA0NCU0
+🤖 正在為影片產生摘要: N5yJJA0NCU0 - AI on campus...
+INFO:     127.0.0.1:51769 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51769 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51773 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51776 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51778 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51785 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51785 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51785 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51785 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_N5yJJA0NCU0.md
+📚 立即新增影片到資料庫: AI on campus
+📝 寫入 2 筆新影片紀錄到 new_videos.txt
+[2026-01-18 20:30:35.923637] 檢查完成。
+
+INFO:     127.0.0.1:51792 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51792 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51795 - "GET /api/summary/N5yJJA0NCU0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51798 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51798 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51798 - "GET /api/summary/N5yJJA0NCU0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51850 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51873 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51870 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51873 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51948 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51983 - "GET /assets/index-CBdcKmwM.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51994 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51997 - "GET /api/summary/N5yJJA0NCU0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52010 - "POST /api/videos/N5yJJA0NCU0/toggle_read HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52010 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-18 23:26:56 CST)" was missed by 2:40:48.220972
+INFO:     127.0.0.1:55987 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55987 - "GET /assets/index-MGN4Wrid.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55987 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55987 - "GET /api/videos HTTP/1.1" 200 OK
+[2026-01-18 23:26:56.707793] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+⚠️ 跳過 Shorts: DEtbsvm-Fhg
+⚠️ 跳過 Shorts: GCj3R-GbGNc
+⚠️ 跳過 Shorts: Jl7PdNxjO3o
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@LennysPodcast)
+[2026-01-18 23:27:03] New Video: How a Meta PM ships products without ever writing code | Zevi Arnovitz - https://www.youtube.com/watch?v=1em64iUFt3U
+🤖 正在為影片產生摘要: 1em64iUFt3U - How a Meta PM ships products without ever writing code | Zevi Arnovitz...
+✅ 摘要已儲存至: summary_1em64iUFt3U.md
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+👀 正在檢查: https://www.youtube.com/@EveryInc
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+⚠️ 跳過 Shorts: KEWg-PyXY4s
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+⚠️ 跳過 Shorts: qBKkZND4sXY
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+⚠️ 跳過 Shorts: QB2RnIG18YE
+⚠️ 跳過 Shorts: RtI3docFOYU
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+⚠️ 跳過 Shorts: VdNsre3CYD4
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+⚠️ 跳過 Shorts: BZNotz6oqx4
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+⚠️ 跳過 Shorts: VhoLomysGho
+⚠️ 跳過 Shorts: VEdQRrgkw60
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+⚠️ 跳過 Shorts: cMtoCVbD7-4
+⚠️ 跳過 Shorts: Rz8Rqn_cBTE
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@StephenGPope)
+[2026-01-18 23:28:25] New Video: 20X Your Development Speed (Copy My Vibecoding Setup) - https://www.youtube.com/watch?v=m0fi8_t9Gs4
+🤖 正在為影片產生摘要: m0fi8_t9Gs4 - 20X Your Development Speed (Copy My Vibecoding Setup)...
+✅ 摘要已儲存至: summary_m0fi8_t9Gs4.md
+📚 立即新增影片到資料庫: 20X Your Development Speed (Copy My Vibecoding Setup)
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+📝 寫入 2 筆新影片紀錄到 new_videos.txt
+[2026-01-18 23:28:49.314764] 檢查完成。
+
+INFO:     127.0.0.1:59198 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59198 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59232 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59288 - "GET /api/summary/m0fi8_t9Gs4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59316 - "GET /api/summary/m0fi8_t9Gs4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59329 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59412 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59412 - "GET /assets/index-CHp6OBkd.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59414 - "GET /assets/index-CtKjcxE2.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59412 - "GET /api/videos HTTP/1.1" 200 OK

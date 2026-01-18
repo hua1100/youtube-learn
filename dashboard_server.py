@@ -60,6 +60,65 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# === Level 1 Observability: Metrics Middleware ===
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+import time
+
+# Metrics Storage (In-Memory)
+metrics = {
+    "total_requests": 0,
+    "total_errors": 0,
+    "last_request_time": None,
+    "avg_latency_ms": 0.0,
+    "uptime_start": datetime.now().isoformat()
+}
+
+class MetricsMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        start_time = time.time()
+        
+        # Track Request
+        metrics["total_requests"] += 1
+        metrics["last_request_time"] = datetime.now().isoformat()
+        
+        try:
+            response = await call_next(request)
+            
+            # Track Error (HTTP 500+)
+            if response.status_code >= 500:
+                metrics["total_errors"] += 1
+                
+            return response
+        except Exception as e:
+            # Track Unhandled Exception
+            metrics["total_errors"] += 1
+            raise e
+        finally:
+            # Calculate Latency
+            process_time = (time.time() - start_time) * 1000 # ms
+            
+            # Simple moving average for latency (to keep it stable but responsive)
+            # New Avg = 0.9 * Old + 0.1 * New
+            if metrics["avg_latency_ms"] == 0:
+                 metrics["avg_latency_ms"] = process_time
+            else:
+                 metrics["avg_latency_ms"] = (metrics["avg_latency_ms"] * 0.9) + (process_time * 0.1)
+
+app.add_middleware(MetricsMiddleware)
+
+@app.get("/api/health_stats")
+def get_health_stats():
+    """
+    Expose monitoring metrics for the dashboard.
+    """
+    return {
+        "status": "healthy",
+        "metrics": metrics,
+        "scheduler_running": scheduler.running
+    }
+# ===============================================
+
 class Video(BaseModel):
     id: str
     title: str

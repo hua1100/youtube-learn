@@ -45,6 +45,13 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchVideos();
+
+        // Auto-refresh every 60 seconds
+        const intervalId = setInterval(() => {
+            fetchVideos(true);
+        }, 60000);
+
+        return () => clearInterval(intervalId);
     }, []);
 
     // Handler to open summary

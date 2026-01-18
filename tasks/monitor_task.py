@@ -27,7 +27,8 @@ CHANNELS = [
     "https://www.youtube.com/@AcquiredFM",
     "https://www.youtube.com/@howiaipodcast",
     "https://www.youtube.com/@hamelhusain7140",
-    "https://www.youtube.com/@StephenGPope"
+    "https://www.youtube.com/@StephenGPope",
+    "https://www.youtube.com/@anthropic-ai"
 ]
 
 def load_state():
