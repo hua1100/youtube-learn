@@ -42,6 +42,10 @@ const SummaryPanel = ({ video, onClose }) => {
         setChatInput('');
         setIsChatLoading(true);
 
+        // Preliminary empty message for AI to fill
+        const initialAiMsg = { role: 'assistant', content: '' };
+        setChatMessages(prev => [...prev, initialAiMsg]);
+
         try {
             const response = await fetch('http://localhost:8000/api/chat', {
                 method: 'POST',
@@ -54,11 +58,42 @@ const SummaryPanel = ({ video, onClose }) => {
 
             if (!response.ok) throw new Error('Failed to fetch answer');
 
-            const data = await response.json();
-            setChatMessages(prev => [...prev, data]);
+            // Streaming reader
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let aiText = '';
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                const chunk = decoder.decode(value, { stream: true });
+                aiText += chunk;
+
+                // Update the last message (AI's message) with new text
+                setChatMessages(prev => {
+                    const newMsgs = [...prev];
+                    const lastMsg = newMsgs[newMsgs.length - 1];
+                    if (lastMsg.role === 'assistant') {
+                        lastMsg.content = aiText;
+                    }
+                    return newMsgs;
+                });
+            }
+
         } catch (error) {
             console.error(error);
-            setChatMessages(prev => [...prev, { role: 'assistant', content: "Sorry, something went wrong. Please try again." }]);
+            setChatMessages(prev => {
+                const newMsgs = [...prev];
+                const lastMsg = newMsgs[newMsgs.length - 1];
+                // If last msg was empty placeholder, fill error. Else append error.
+                if (lastMsg.role === 'assistant') {
+                    lastMsg.content += "\n[Error: Connection failed]";
+                } else {
+                    newMsgs.push({ role: 'assistant', content: "Sorry, something went wrong." });
+                }
+                return newMsgs;
+            });
         } finally {
             setIsChatLoading(false);
         }
@@ -423,7 +458,6 @@ const Popup = ({ selection, onSave, note, setNote }) => {
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Enter your thoughts..."
                 className="w-full text-sm p-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-3 resize-none h-24"
-                autoFocus
             />
             <button
                 onClick={onSave}

@@ -241,52 +241,92 @@ class ChatRequest(BaseModel):
     video_id: str
     messages: List[dict] # [{"role": "user", "content": "..."}]
 
+from fastapi.responses import StreamingResponse
+
+from tasks.rag_service import get_or_create_store, chat_with_store_stream, is_file_indexed
+import os
+
 @app.post("/api/chat")
 async def chat_with_video(request: ChatRequest):
-    if not CHAT_API_KEY or not CHAT_BASE_URL:
-         raise HTTPException(status_code=500, detail="LLM configuration missing (API Key or Base URL)")
-
+    # Determine which mode to use based on env vars
+    # If GEMINI_API_KEY is present, we use RAG (File Search)
+    # Otherwise, we fallback to the original context stuffing (OpenAI/Other)
+    
+    gemini_key = os.getenv("GEMINI_API_KEY")
     video_id = request.video_id
     messages = request.messages
-    
-    # 1. Get Transcript (Cached or Fetch)
-    # We force save_to_file=True to ensure we cache it for next time
+
+    # >>> Strategy 1: Gemini RAG (Preferred if key exists) <<<
+    if gemini_key:
+        print(f"Using Gemini RAG for video {video_id}")
+        
+        # Generator for streaming RAG response
+        async def rag_generate():
+            try:
+                # 1. Check/Prepare Knowledge Base
+                # Only show status if we actually need to index
+                if not is_file_indexed(video_id):
+                     yield "🔄 [System] Initializing knowledge base for this video... (This happens only once)\n\n"
+                     yield "---\n"
+                
+                # This might take a few seconds if not indexed
+                transcript_path = os.path.abspath(f"transcripts/{video_id}.json")
+                if not os.path.exists(transcript_path):
+                     # Ensure we have the transcript first
+                     get_transcript_text(video_id, save_to_file=True)
+                
+                # 2. Get Store (Lazy Loading) - In this mode, 'store_name' is actually a File Object or Name
+                file_obj = get_or_create_store(video_id, transcript_path)
+                
+                # 3. Chat
+                
+                # Pass file_obj.name or file_obj depending on what chat_with_store_stream expects
+                # Updated rag_service handles both.
+                rag_stream = chat_with_store_stream(file_obj, messages)
+                for chunk in rag_stream:
+                    yield chunk
+                    
+            except Exception as e:
+                print(f"RAG Error: {e}")
+                yield f"\n[Error: {str(e)}]"
+
+        return StreamingResponse(rag_generate(), media_type="text/event-stream")
+
+    # >>> Strategy 2: Original Context Stuffing (Fallback) <<<
+    if not CHAT_API_KEY or not CHAT_BASE_URL:
+         raise HTTPException(status_code=500, detail="No LLM configuration found (GEMINI_API_KEY or LLM_API_KEY).")
+
+    # ... (Keep existing Logic for OpenAI/Local LLM) ...
     transcript_text = get_transcript_text(video_id, save_to_file=True)
-    
     if not transcript_text:
-         raise HTTPException(status_code=404, detail="Transcript not available for this video.")
+         raise HTTPException(status_code=404, detail="Transcript not available.")
          
-    # 2. Construct Prompt context
-    # We explicitly add the transcript to the system prompt or first user message
-    # To save tokens, we might want to truncate, but for now we assume it fits (or we rely on summarizer logic to truncate)
-    
     system_prompt = f"""
     You are an AI assistant helping a user understand a YouTube video.
-    Below is the transcript of the video. 
-    Answer the user's questions based primarily on this transcript.
-    If the answer is not in the transcript, state that you don't know based on the video content.
+    Below is the transcript.
     
     Transcript:
     {transcript_text[:200000]} 
-    (Transcript truncated for safety if too long)
+    (Truncated if too long)
     """
-    
-    # Prepend system prompt
     full_messages = [{"role": "system", "content": system_prompt}] + messages
     
     try:
         client = OpenAI(api_key=CHAT_API_KEY, base_url=CHAT_BASE_URL)
-        response = client.chat.completions.create(
-            model=CHAT_MODEL,
-            messages=full_messages,
-            temperature=0.7,
-            stream=False # Keep it simple for now, return full text
-        )
-        answer = response.choices[0].message.content
-        return {"role": "assistant", "content": answer}
+        def generate():
+            stream = client.chat.completions.create(
+                model=CHAT_MODEL,
+                messages=full_messages,
+                temperature=0.7,
+                stream=True 
+            )
+            for chunk in stream:
+                 if chunk.choices[0].delta.content:
+                     yield chunk.choices[0].delta.content
+
+        return StreamingResponse(generate(), media_type="text/event-stream")
         
     except Exception as e:
-        print(f"Chat Error: {e}")
         raise HTTPException(status_code=500, detail=f"LLM Error: {str(e)}")
 
 
