@@ -2756,3 +2756,1007 @@ INFO:     127.0.0.1:59412 - "GET / HTTP/1.1" 200 OK
 INFO:     127.0.0.1:59412 - "GET /assets/index-CHp6OBkd.js HTTP/1.1" 200 OK
 INFO:     127.0.0.1:59414 - "GET /assets/index-CtKjcxE2.css HTTP/1.1" 200 OK
 INFO:     127.0.0.1:59412 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59460 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59499 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59554 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59608 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59657 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59681 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59714 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59761 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59803 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59823 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59845 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59872 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59896 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59933 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59960 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59990 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60012 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60035 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60107 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60153 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60193 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60234 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60270 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60339 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60360 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60403 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60421 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60444 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60474 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60514 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60570 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60589 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60614 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60643 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60676 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60722 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60746 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60769 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60808 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60833 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60872 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60898 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60918 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60951 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60971 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61008 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61037 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61060 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61099 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61121 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61150 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61174 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61206 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61238 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61261 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61295 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61319 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61336 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61381 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61405 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61443 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61466 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61486 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61523 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61653 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61684 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61710 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61790 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61809 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61833 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61857 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61893 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61914 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61947 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61971 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61997 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62019 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62049 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62070 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62094 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62125 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62154 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62174 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62215 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62237 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62288 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62331 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62391 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62442 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62483 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62563 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62609 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62647 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62713 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62753 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62796 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62864 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62895 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62947 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62979 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63033 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63066 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63133 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63206 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63237 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63332 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63425 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63425 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-19 09:46:02.698430] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:63439 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63439 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+👀 正在檢查: https://www.youtube.com/@EveryInc
+INFO:     127.0.0.1:63439 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63439 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+⚠️ 跳過 Shorts: KEWg-PyXY4s
+INFO:     127.0.0.1:63449 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+INFO:     127.0.0.1:63449 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:63449 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+INFO:     127.0.0.1:63457 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63457 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+INFO:     127.0.0.1:63457 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63457 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+⚠️ 跳過 Shorts: QB2RnIG18YE
+INFO:     127.0.0.1:63464 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63464 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: RtI3docFOYU
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+INFO:     127.0.0.1:63464 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63464 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+INFO:     127.0.0.1:63464 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63464 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VdNsre3CYD4
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:63471 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:63471 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+INFO:     127.0.0.1:63483 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63483 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: H7VPjqDPD7M
+INFO:     127.0.0.1:63483 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63483 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+⚠️ 跳過 Shorts: VhoLomysGho
+INFO:     127.0.0.1:63490 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63490 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VEdQRrgkw60
+INFO:     127.0.0.1:63490 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63490 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+INFO:     127.0.0.1:63490 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63490 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: X9ddUOgPmLI
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+沒有發現新影片。
+[2026-01-19 09:46:37.962903] 檢查完成。
+
+INFO:     127.0.0.1:63496 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63496 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63508 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63596 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63684 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63756 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63863 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63930 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63985 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64030 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64075 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64149 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64206 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64239 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64298 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64324 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64355 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64393 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64547 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64619 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64663 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64746 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64799 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64843 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64877 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64983 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65122 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65230 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53697 - "GET /assets/index-CHp6OBkd.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53736 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53760 - "GET /api/videos HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-19 15:26:56 CST)" was missed by 0:17:31.651371
+INFO:     127.0.0.1:53794 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53825 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53903 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54013 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54164 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54234 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54330 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54382 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54409 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54452 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54494 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54516 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54539 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54566 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54602 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54628 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54665 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54687 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54710 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54738 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54761 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54787 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54882 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54919 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54960 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54985 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55007 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55064 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55100 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55150 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55176 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55196 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55231 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55292 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55319 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55338 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55358 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55390 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55417 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55462 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55497 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55540 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55724 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55787 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55811 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55846 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55895 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55922 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55954 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55977 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56006 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56025 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56070 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56098 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56148 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56172 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56200 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56222 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56267 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56315 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56375 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56417 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56489 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56553 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56604 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56645 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56678 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56699 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56732 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56774 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56813 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56853 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56893 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56920 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56952 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57006 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57040 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57154 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57179 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57210 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57241 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57273 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57295 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57323 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57352 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57375 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57423 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57450 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57503 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57531 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57559 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57591 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57626 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57652 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57704 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57722 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57756 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57782 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57822 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57859 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57878 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57909 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57934 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57969 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58001 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58020 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58037 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58060 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58079 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58089 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58113 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58123 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58164 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58185 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58204 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58220 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58248 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58271 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58296 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58314 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58343 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58372 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58400 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58426 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58446 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58463 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58490 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58516 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58560 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58599 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58621 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58653 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58673 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58699 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58723 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58755 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58785 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58818 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58848 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58867 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58886 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58926 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58942 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58965 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58990 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59011 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59032 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59071 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59119 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59139 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59169 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59212 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59238 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59269 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59291 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59314 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59331 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59356 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59391 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59433 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59463 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59487 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59516 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59536 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59580 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59616 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59636 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59669 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59700 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59722 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59750 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59816 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59940 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60014 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60061 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60091 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60129 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60229 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60244 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60244 - "GET /assets/index-CHp6OBkd.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60245 - "GET /assets/index-CtKjcxE2.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60244 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60244 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60337 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60377 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60418 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60463 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60502 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60544 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60609 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60636 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60673 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60736 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60791 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60857 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60929 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60984 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61076 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61122 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61150 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61206 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61250 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61314 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61351 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61402 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61458 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61557 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61621 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61648 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61684 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61819 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61860 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61877 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61922 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61977 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61995 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62016 - "GET /api/videos HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-19 19:26:56 CST)" was missed by 1:19:29.421578
+INFO:     127.0.0.1:62039 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62070 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62098 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62133 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62160 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62181 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62181 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-19 16:51:32.151627] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:62188 - "GET /api/status HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:62188 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+INFO:     127.0.0.1:62188 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62188 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@EveryInc
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+INFO:     127.0.0.1:62219 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62219 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: KEWg-PyXY4s
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+INFO:     127.0.0.1:62226 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62219 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62226 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62226 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62226 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:62231 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62231 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+INFO:     127.0.0.1:62231 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62231 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+INFO:     127.0.0.1:62235 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62235 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+INFO:     127.0.0.1:62235 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62235 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: QB2RnIG18YE
+⚠️ 跳過 Shorts: RtI3docFOYU
+INFO:     127.0.0.1:62242 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62242 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+INFO:     127.0.0.1:62242 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62242 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+⚠️ 跳過 Shorts: VdNsre3CYD4
+INFO:     127.0.0.1:62242 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62242 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:62251 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62251 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:62251 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62251 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+INFO:     127.0.0.1:62260 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62260 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: H7VPjqDPD7M
+INFO:     127.0.0.1:62260 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62260 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+INFO:     127.0.0.1:62260 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62260 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VhoLomysGho
+INFO:     127.0.0.1:62269 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62269 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VEdQRrgkw60
+INFO:     127.0.0.1:62269 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62269 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+⚠️ 跳過 Shorts: X9ddUOgPmLI
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+沒有發現新影片。
+[2026-01-19 16:52:12.483239] 檢查完成。
+
+INFO:     127.0.0.1:62276 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62300 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62347 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62377 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62406 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62448 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62478 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62502 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62540 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62584 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62614 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62634 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62672 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62689 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62711 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62734 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62763 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62792 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62824 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62845 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62868 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62893 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62913 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62996 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63038 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-19 17:29:29.235434] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:63046 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63046 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+👀 正在檢查: https://www.youtube.com/@EveryInc
+INFO:     127.0.0.1:63046 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63046 - "GET /api/videos HTTP/1.1" 200 OK
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+⚠️ 跳過 Shorts: KEWg-PyXY4s
+INFO:     127.0.0.1:63062 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63062 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+INFO:     127.0.0.1:63062 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63062 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+INFO:     127.0.0.1:63069 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63069 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:63069 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63069 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+INFO:     127.0.0.1:63069 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63069 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+INFO:     127.0.0.1:63078 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63078 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: QB2RnIG18YE
+INFO:     127.0.0.1:63078 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63078 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: RtI3docFOYU
+INFO:     127.0.0.1:63086 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63086 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+INFO:     127.0.0.1:63086 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63086 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+INFO:     127.0.0.1:63086 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63086 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VdNsre3CYD4
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:63093 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63093 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:63093 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63093 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+INFO:     127.0.0.1:63102 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63102 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+INFO:     127.0.0.1:63102 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63102 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: H7VPjqDPD7M
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+INFO:     127.0.0.1:63102 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63102 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VhoLomysGho
+INFO:     127.0.0.1:63118 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VEdQRrgkw60
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+INFO:     127.0.0.1:63118 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: X9ddUOgPmLI
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+沒有發現新影片。
+[2026-01-19 17:30:09.324513] 檢查完成。
+
+INFO:     127.0.0.1:63129 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63129 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63129 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63213 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63236 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63278 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63284 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63322 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63364 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63406 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63433 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63478 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63548 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63643 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63681 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63704 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63748 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63811 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63861 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63894 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63927 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63976 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64007 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64054 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64092 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64129 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64171 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64205 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64234 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64269 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64297 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64333 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64369 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64428 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64460 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64501 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64544 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64577 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64610 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64632 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64684 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64793 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64944 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64965 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64997 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65000 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65046 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65109 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65142 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65215 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65474 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49166 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49212 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49270 - "POST /api/refresh HTTP/1.1" 200 OK
+[2026-01-19 21:08:05.501919] 開始檢查 YouTube 頻道更新...
+👀 正在檢查: https://www.youtube.com/@LennysPodcast
+👀 正在檢查: https://www.youtube.com/@googleantigravity
+👀 正在檢查: https://www.youtube.com/@Google/videos
+INFO:     127.0.0.1:49280 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: owgMScl57Ps
+👀 正在檢查: https://www.youtube.com/@ycombinator
+INFO:     127.0.0.1:49280 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: UZbXWYY7y-A
+👀 正在檢查: https://www.youtube.com/@a16z
+👀 正在檢查: https://www.youtube.com/@aiDotEngineer
+👀 正在檢查: https://www.youtube.com/@EveryInc
+👀 正在檢查: https://www.youtube.com/@AcquiredFM
+INFO:     127.0.0.1:49280 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: KEWg-PyXY4s
+INFO:     127.0.0.1:49300 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49300 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: eB5MxN3mcwY
+INFO:     127.0.0.1:49300 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49300 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: -DQnKBEVsFE
+INFO:     127.0.0.1:49304 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: XdTBh3zY8Wk
+INFO:     127.0.0.1:49304 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: qBKkZND4sXY
+INFO:     127.0.0.1:49304 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: AkuQ9kts8g0
+INFO:     127.0.0.1:49320 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49320 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: PDZpCQNj2xY
+INFO:     127.0.0.1:49320 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49320 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: QB2RnIG18YE
+INFO:     127.0.0.1:49320 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49327 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49327 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: RtI3docFOYU
+INFO:     127.0.0.1:49327 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49327 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: T2CK2oTw0pc
+INFO:     127.0.0.1:49327 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49327 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: E_qwUVmtQGs
+INFO:     127.0.0.1:49350 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49350 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: VdNsre3CYD4
+INFO:     127.0.0.1:49350 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49350 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: khqFp0uG5WU
+👀 正在檢查: https://www.youtube.com/@howiaipodcast
+INFO:     127.0.0.1:49382 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49382 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: BZNotz6oqx4
+INFO:     127.0.0.1:49382 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49382 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: 5puQRJOWy-E
+INFO:     127.0.0.1:49382 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49382 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49400 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49400 - "GET /api/videos HTTP/1.1" 200 OK
+⚠️ 跳過 Shorts: FaeSRaRm7w8
+🔎 發現 1 部新影片 (Channel: https://www.youtube.com/@howiaipodcast)
+[2026-01-19 21:08:43] New Video: Claude Code for product managers: research, writing, context libraries, custom to-do system, more - https://www.youtube.com/watch?v=oBho3hZ7MHM
+🤖 正在為影片產生摘要: oBho3hZ7MHM - Claude Code for product managers: research, writing, context libraries, custom to-do system, more...
+INFO:     127.0.0.1:49400 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49400 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49413 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49417 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49417 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49417 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49417 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49422 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49433 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49433 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49433 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49433 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49450 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49450 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 摘要已儲存至: summary_oBho3hZ7MHM.md
+📚 立即新增影片到資料庫: Claude Code for product managers: research, writing, context libraries, custom to-do system, more
+👀 正在檢查: https://www.youtube.com/@hamelhusain7140
+⚠️ 跳過 Shorts: H7VPjqDPD7M
+⚠️ 跳過 Shorts: LDI1mXZ20Jw
+⚠️ 跳過 Shorts: VhoLomysGho
+⚠️ 跳過 Shorts: VEdQRrgkw60
+⚠️ 跳過 Shorts: a0ZLmG2WUBs
+👀 正在檢查: https://www.youtube.com/@StephenGPope
+⚠️ 跳過 Shorts: X9ddUOgPmLI
+👀 正在檢查: https://www.youtube.com/@anthropic-ai
+📝 寫入 1 筆新影片紀錄到 new_videos.txt
+[2026-01-19 21:09:39.661983] 檢查完成。
+
+INFO:     127.0.0.1:49512 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49513 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49512 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49574 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49647 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49654 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49688 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49761 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49789 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49845 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49872 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49923 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49963 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49996 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50050 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50086 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50138 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50168 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50215 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50259 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50288 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50323 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50369 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50395 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50458 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50476 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50498 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50520 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50561 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50596 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50627 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50654 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50693 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50722 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50780 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50808 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50862 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50892 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50914 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50947 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50977 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50992 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51031 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51068 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51113 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51138 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51179 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51211 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51255 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51294 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51348 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51377 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51471 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51535 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51578 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51603 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51635 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51666 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51706 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51814 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51882 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51922 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51966 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52035 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52127 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52188 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52236 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52280 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52314 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52375 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52408 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52453 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52499 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52533 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52581 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52622 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52648 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52682 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52779 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52829 - "GET /api/videos HTTP/1.1" 200 OK
+Run time of job "run_update_wrapper (trigger: interval[4:00:00], next run at: 2026-01-19 23:26:56 CST)" was missed by 3:12:41.104064
+INFO:     127.0.0.1:52898 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52934 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52970 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53009 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53049 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53086 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53090 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53090 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53123 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53169 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53237 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53240 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53303 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53351 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53358 - "GET /api/summary/xeZDHGjG5zM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53362 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53414 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53493 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53513 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53553 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53640 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53685 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53738 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53798 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [71097]
+⚠️  Server crashed/stopped with exit code: 143
+INFO:     Started server process [27544]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+⏰ Starting Scheduler...
+INFO:     127.0.0.1:53899 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53920 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53928 - "GET /api/health_stats HTTP/1.1" 200 OK
+✅ 逐字稿已緩存至: /Users/hua/youtube_learn/tasks/../transcripts/oBho3hZ7MHM.json
+INFO:     127.0.0.1:53941 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53981 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53999 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53999 - "GET /assets/index-OHviw-sV.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54000 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53999 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53999 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54007 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54024 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54066 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54091 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54108 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54136 - "GET /api/summary/oBho3hZ7MHM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54145 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54151 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54176 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54195 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54227 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54282 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54288 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54293 - "GET /api/summary/m0fi8_t9Gs4 HTTP/1.1" 200 OK
+✅ 逐字稿已緩存至: /Users/hua/youtube_learn/tasks/../transcripts/m0fi8_t9Gs4.json
+INFO:     127.0.0.1:54297 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54330 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54323 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54429 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54444 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54463 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54468 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54468 - "GET /assets/index-D_kustNz.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54469 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54468 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54468 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54468 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54473 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54473 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54475 - "GET /assets/index-D_kustNz.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54475 - "GET /vite.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54473 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54484 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54482 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55102 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55102 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55102 - "GET /assets/index-D7vJpWsS.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55103 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55102 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55102 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55119 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+✅ 逐字稿已緩存至: /Users/hua/youtube_learn/tasks/../transcripts/1em64iUFt3U.json
+INFO:     127.0.0.1:55138 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55138 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55179 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55192 - "GET /api/summary/m0fi8_t9Gs4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55198 - "GET /api/summary/1em64iUFt3U HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55198 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55209 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55211 - "GET /assets/index-Dtxz6s-q.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:55233 - "GET /api/summary/s47C9_qDvJs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55391 - "GET /api/summary/KtKJ3A6DWTs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55459 - "GET /api/videos HTTP/1.1" 200 OK
+✅ 逐字稿已緩存至: /Users/hua/youtube_learn/tasks/../transcripts/KtKJ3A6DWTs.json
+INFO:     127.0.0.1:55525 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55613 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55615 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55651 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55663 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55710 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55765 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55883 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55900 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55971 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56102 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56124 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56207 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56221 - "GET /api/summary/KtKJ3A6DWTs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56329 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56424 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56446 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56544 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56605 - "GET /api/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56649 - "GET /api/videos HTTP/1.1" 200 OK

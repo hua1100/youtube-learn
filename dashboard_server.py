@@ -228,6 +228,68 @@ def toggle_read(video_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# === Chat API ===
+from tasks.summarizer import get_transcript_text
+from openai import OpenAI
+
+# Reuse env vars for Chat
+CHAT_API_KEY = os.getenv("LLM_API_KEY")
+CHAT_BASE_URL = os.getenv("LLM_BASE_URL")
+CHAT_MODEL = os.getenv("LLM_MODEL", "gpt-4o")
+
+class ChatRequest(BaseModel):
+    video_id: str
+    messages: List[dict] # [{"role": "user", "content": "..."}]
+
+@app.post("/api/chat")
+async def chat_with_video(request: ChatRequest):
+    if not CHAT_API_KEY or not CHAT_BASE_URL:
+         raise HTTPException(status_code=500, detail="LLM configuration missing (API Key or Base URL)")
+
+    video_id = request.video_id
+    messages = request.messages
+    
+    # 1. Get Transcript (Cached or Fetch)
+    # We force save_to_file=True to ensure we cache it for next time
+    transcript_text = get_transcript_text(video_id, save_to_file=True)
+    
+    if not transcript_text:
+         raise HTTPException(status_code=404, detail="Transcript not available for this video.")
+         
+    # 2. Construct Prompt context
+    # We explicitly add the transcript to the system prompt or first user message
+    # To save tokens, we might want to truncate, but for now we assume it fits (or we rely on summarizer logic to truncate)
+    
+    system_prompt = f"""
+    You are an AI assistant helping a user understand a YouTube video.
+    Below is the transcript of the video. 
+    Answer the user's questions based primarily on this transcript.
+    If the answer is not in the transcript, state that you don't know based on the video content.
+    
+    Transcript:
+    {transcript_text[:200000]} 
+    (Transcript truncated for safety if too long)
+    """
+    
+    # Prepend system prompt
+    full_messages = [{"role": "system", "content": system_prompt}] + messages
+    
+    try:
+        client = OpenAI(api_key=CHAT_API_KEY, base_url=CHAT_BASE_URL)
+        response = client.chat.completions.create(
+            model=CHAT_MODEL,
+            messages=full_messages,
+            temperature=0.7,
+            stream=False # Keep it simple for now, return full text
+        )
+        answer = response.choices[0].message.content
+        return {"role": "assistant", "content": answer}
+        
+    except Exception as e:
+        print(f"Chat Error: {e}")
+        raise HTTPException(status_code=500, detail=f"LLM Error: {str(e)}")
+
+
 @app.get("/api/status")
 def get_status():
     return {

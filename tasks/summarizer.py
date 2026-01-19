@@ -1,4 +1,5 @@
 import os
+import json
 from openai import OpenAI
 from youtube_transcript_api import YouTubeTranscriptApi
 from dotenv import load_dotenv
@@ -34,17 +35,62 @@ PROMPT_TEMPLATE = """
 {transcript}
 """
 
-def get_transcript_text(video_id):
+
+def get_transcript_text(video_id, save_to_file=False):
+    """
+    獲取逐字稿文字。
+    :param video_id: YouTube Video ID
+    :param save_to_file: 是否儲存為 JSON 檔案 (transcripts/{video_id}.json)
+    :return: 逐字稿純文字 string or None
+    """
+    # 1. Check if local file exists
+    transcript_dir = os.path.join(os.path.dirname(__file__), "..", "transcripts")
+    os.makedirs(transcript_dir, exist_ok=True)
+    file_path = os.path.join(transcript_dir, f"{video_id}.json")
+
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                # 兼容舊格式或直接儲存 plain text 的情況 (雖然後面我們打算存 list struct)
+                # 這裡簡單起見，我們如果存的是 raw list of dicts from youtube_transcript_api
+                if isinstance(data, list):
+                    return " ".join([item.get('text', '') for item in data])
+                elif isinstance(data, dict) and 'text' in data:
+                    return data['text']
+        except Exception as e:
+            print(f"⚠️ 讀取本地逐字稿失敗 ({video_id}): {e}")
+
     try:
         # 使用新版 API (v1.2.3+ or similar variant)
         # 根據 debug，它是 class 且有 fetch 方法
         yt_api = YouTubeTranscriptApi()
         transcript_obj = yt_api.fetch(video_id, languages=['zh-TW', 'zh', 'en'])
         
-        # 轉換為純文字
+        # transcript_obj is a list of dicts: [{'text': '...', 'start': 0.0, 'duration': 1.0}, ...]
         if transcript_obj:
-            # 根據報錯 'FetchedTranscriptSnippet object is not subscriptable'
-            # 這代表回傳的是物件列表，要用 .text 屬性存取
+            # Save to file if requested
+            if save_to_file:
+                try:
+                    # Save the raw structured data for future potential use (timestamps etc)
+                    # Convert to list if it isn't already (fetch usually returns a list-like object)
+                    # Depending on library version, it might be a specific object type, but usually valid list of dicts.
+                    # We will serialise it.
+                    serializable = []
+                    for item in transcript_obj:
+                        serializable.append({
+                            'text': item.text if hasattr(item, 'text') else item.get('text'),
+                            'start': item.start if hasattr(item, 'start') else item.get('start'),
+                            'duration': item.duration if hasattr(item, 'duration') else item.get('duration')
+                        })
+                    
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        json.dump(serializable, f, ensure_ascii=False, indent=2)
+                        print(f"✅ 逐字稿已緩存至: {file_path}")
+                except Exception as e:
+                    print(f"⚠️ 緩存逐字稿失敗: {e}")
+
+            # Return text
             full_text = " ".join([snippet.text for snippet in transcript_obj])
             return full_text
         return None
@@ -64,7 +110,7 @@ def summarize_video(video_id, video_title=""):
         print("⚠️ 未設定 LLM_API_KEY 或 LLM_BASE_URL，跳過摘要生成。")
         return None
 
-    transcript_text = get_transcript_text(video_id)
+    transcript_text = get_transcript_text(video_id, save_to_file=True)
     if not transcript_text:
         return None
     
