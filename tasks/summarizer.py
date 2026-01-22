@@ -95,8 +95,106 @@ def get_transcript_text(video_id, save_to_file=False):
             return full_text
         return None
     except Exception as e:
-        print(f"❌ 無法獲取逐字稿 ({video_id}): {e}")
-        return None
+        print(f"❌ 傳統 API 獲取逐字稿失敗 ({video_id}): {e}")
+        print("🔄 嘗試使用 yt-dlp 備援機制...")
+        
+        try:
+            import yt_dlp
+            
+            url = f"https://www.youtube.com/watch?v={video_id}"
+            ydl_opts = {
+                'skip_download': True,
+                'writeautomaticsub': True,
+                'writesubtitles': True,
+                'subtitleslangs': ['zh-TW', 'zh', 'en'],
+                'quiet': True,
+                'no_warnings': True,
+            }
+            
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(url, download=False)
+                
+                # Check for subtitles or automatic captions
+                subtitles = info.get('subtitles', {}) or info.get('automatic_captions', {})
+                
+                # Prioritize Traditional Chinese -> Chinese -> English
+                lang_priority = ['zh-TW', 'zh-Hant', 'zh', 'zh-Hans', 'en']
+                selected_lang = None
+                
+                for lang in lang_priority:
+                     if lang in subtitles:
+                         selected_lang = lang
+                         break
+                
+                if not selected_lang and subtitles:
+                    selected_lang = list(subtitles.keys())[0]
+                    
+                if selected_lang:
+                    print(f"✅ 找到字幕語言: {selected_lang}")
+                    
+                    # Use yt-dlp to download subtitles to a temporary file
+                    # We need to re-configure ydl for downloading specific sub
+                    try:
+                        temp_filename = f"temp_sub_{video_id}"
+                        ydl_opts_download = {
+                            'skip_download': True,
+                            'writesubtitles': True,
+                            'writeautomaticsub': True,
+                            'subtitleslangs': [selected_lang],
+                            'outtmpl': temp_filename,
+                            'quiet': True,
+                            'no_warnings': True,
+                            'extractor_args': {'youtube': {'player_client': ['android']}},
+                        }
+                        
+                        with yt_dlp.YoutubeDL(ydl_opts_download) as ydl_down:
+                            ydl_down.download([url])
+                        
+                        # Find the downloaded file
+                        # yt-dlp appends language code: temp_sub_{video_id}.zh-Hant.vtt
+                        expected_file = f"{temp_filename}.{selected_lang}.vtt"
+                        
+                        if not os.path.exists(expected_file):
+                             # Try guessing other extensions or lang codes if exact match fails
+                             for f in os.listdir('.'):
+                                 if f.startswith(temp_filename) and f.endswith('.vtt'):
+                                     expected_file = f
+                                     break
+                        
+                        if os.path.exists(expected_file):
+                            with open(expected_file, 'r', encoding='utf-8') as f:
+                                raw_content = f.read()
+                            
+                            # Clean up
+                            os.remove(expected_file)
+                            
+                            # VTT Parsing
+                            lines = raw_content.splitlines()
+                            text_lines = []
+                            for line in lines:
+                                if '-->' in line or line.strip() == 'WEBVTT' or not line.strip():
+                                    continue
+                                text_lines.append(line.strip())
+                            
+                            # Remove duplicates/headers if any
+                            # Filter out style tags or similar if needed, but basic buffer is fine
+                            unique_lines = []
+                            last = ""
+                            for line in text_lines:
+                                if line != last:
+                                    unique_lines.append(line)
+                                    last = line
+                                    
+                            return " ".join(unique_lines)
+                        else:
+                             print(f"❌ 無法找到下載的字幕檔案: {expected_file}")
+
+                    except Exception as dl_err:
+                        print(f"❌ yt-dlp 下載流程失敗: {dl_err}")
+                
+        except Exception as yt_e:
+            print(f"❌ yt-dlp 備援失敗: {yt_e}")
+            return None
 
 def summarize_video(video_id, video_title=""):
     print(f"🤖 正在為影片產生摘要: {video_id} - {video_title}...")
@@ -132,7 +230,16 @@ def summarize_video(video_id, video_title=""):
         )
         
         summary = response.choices[0].message.content
-        return summary
+        
+        # Clean up markdown fences if present
+        if summary.startswith("```markdown"):
+            summary = summary.replace("```markdown", "", 1)
+        if summary.startswith("```"):
+            summary = summary.replace("```", "", 1)
+        if summary.endswith("```"):
+            summary = summary.rsplit("```", 1)[0]
+            
+        return summary.strip()
     except Exception as e:
         print(f"❌生成摘要時發生錯誤: {e}")
         return None

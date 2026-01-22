@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar, User, Tag, ExternalLink, FilePlus, Save, MessageSquare, Bot, Send, User as UserIcon } from 'lucide-react';
+import { X, Calendar, User, Tag, ExternalLink, FilePlus, Save, MessageSquare, Bot, Send, User as UserIcon, AtSign, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import clsx from 'clsx';
@@ -15,6 +15,8 @@ const SummaryPanel = ({ video, onClose }) => {
     const [chatInput, setChatInput] = useState('');
     const [chatMessages, setChatMessages] = useState([]);
     const [isChatLoading, setIsChatLoading] = useState(false);
+    const [isThreadsLoading, setIsThreadsLoading] = useState(false);
+    const [threadsStatus, setThreadsStatus] = useState('idle'); // 'idle' | 'success' | 'error'
     const chatEndRef = useRef(null);
 
     // Scroll to bottom of chat
@@ -186,6 +188,60 @@ const SummaryPanel = ({ video, onClose }) => {
         window.getSelection().removeAllRanges();
         CSS.highlights?.delete('obsidian-selection');
     };
+    const handleThreadsSubmit = async () => {
+        const webhookUrl = import.meta.env.VITE_THREADS_WEBHOOK_URL;
+        if (!webhookUrl || webhookUrl === 'your_webhook_url_here') {
+            alert("Please configure VITE_THREADS_WEBHOOK_URL in your .env file");
+            return;
+        }
+
+        setIsThreadsLoading(true);
+        setThreadsStatus('idle');
+
+        try {
+            // Prioritize fullContent, then try to fetch it if missing
+            let finalSummary = video.fullContent || video.highlight || video.preview || "No summary available.";
+
+            if (!video.fullContent) {
+                try {
+                    const summaryRes = await fetch(`/api/summary/${video.id}`);
+                    if (summaryRes.ok) {
+                        const summaryData = await summaryRes.json();
+                        if (summaryData && summaryData.content) {
+                            finalSummary = summaryData.content;
+                        }
+                    }
+                } catch (err) {
+                    console.warn("Could not fetch full summary in panel, falling back", err);
+                }
+            }
+
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: video.title,
+                    link: video.link,
+                    summary: finalSummary,
+                    channel: video.channel_title,
+                    timestamp: new Date().toISOString()
+                })
+            });
+
+            if (response.ok) {
+                setThreadsStatus('success');
+                setTimeout(() => setThreadsStatus('idle'), 3000);
+            } else {
+                setThreadsStatus('error');
+            }
+        } catch (error) {
+            console.error("Failed to send to Threads Webhook", error);
+            setThreadsStatus('error');
+        } finally {
+            setIsThreadsLoading(false);
+        }
+    };
+
     return (
         <AnimatePresence>
             {video && (
@@ -261,14 +317,22 @@ const SummaryPanel = ({ video, onClose }) => {
                                         )}
                                     </button>
 
-                                    <a
-                                        href={video.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-indigo-600 transition-colors"
+                                    <button
+                                        onClick={handleThreadsSubmit}
+                                        disabled={isThreadsLoading}
+                                        title="Post to Threads"
+                                        className={clsx(
+                                            "inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border transition-all duration-200",
+                                            threadsStatus === 'success'
+                                                ? "bg-indigo-100 text-indigo-700 border-indigo-200"
+                                                : threadsStatus === 'error'
+                                                    ? "bg-rose-100 text-rose-700 border-rose-200"
+                                                    : "bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-indigo-600 hover:border-indigo-200"
+                                        )}
                                     >
-                                        Watch <ExternalLink size={12} />
-                                    </a>
+                                        {isThreadsLoading ? <Loader2 size={14} className="animate-spin" /> : <AtSign size={14} />}
+                                        Threads
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -391,8 +455,9 @@ const SummaryPanel = ({ video, onClose }) => {
                         />
                     )}
                 </>
-            )}
-        </AnimatePresence>
+            )
+            }
+        </AnimatePresence >
     );
 };
 

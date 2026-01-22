@@ -56,7 +56,7 @@ def get_channel_id_from_url(url):
             r'"externalId":"([^"]+)"',
             r'"browseId":"(UC[^"]+)"',
             r'itemprop="channelId" content="([^"]+)"',
-            r'"channelId":"([^"]+)"',
+            # r'"channelId":"([^"]+)"', # ⚠️ Removed: Too loose, matches related channels
         ]
         
         for pattern in patterns:
@@ -111,6 +111,30 @@ def is_premiere(video_id):
         # Other errors (e.g. no transcripts but video exists) are not "Premiere" state
         return False
 
+def is_upcoming_live(video_id):
+    """
+    Check if a video is an upcoming live stream.
+    Checks for "status":"UPCOMING" or "scheduledStartTime" in the video page HTML.
+    """
+    url = f"https://www.youtube.com/watch?v={video_id}"
+    try:
+        resp = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+        resp.raise_for_status()
+        content = resp.text
+        
+        # Check for specific indicators of upcoming live stream
+        if '"status":"UPCOMING"' in content:
+            return True
+        
+        # Fallback check (obsereved in some cases)
+        if 'scheduledStartTime' in content:
+            return True
+            
+        return False
+    except Exception as e:
+        print(f"⚠️ Check upcoming live failed for {video_id}: {e}")
+        return False
+
 def get_new_videos(channel_id, last_video_link=None):
     """
     使用 RSS Feed 獲取「新」影片列表。
@@ -119,7 +143,7 @@ def get_new_videos(channel_id, last_video_link=None):
     """
     rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
-        response = requests.get(rss_url, timeout=10)
+        response = requests.get(rss_url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
         response.raise_for_status()
         
         root = ET.fromstring(response.content)
@@ -149,6 +173,11 @@ def get_new_videos(channel_id, last_video_link=None):
             # 3. Check Premiere
             if is_premiere(video_id):
                 print(f"⏳ 影片尚在首播預告中，跳過: {video_id}")
+                continue
+
+            # 4. Check Upcoming Live
+            if is_upcoming_live(video_id):
+                print(f"⏳ 影片為即將直播，跳過: {video_id}")
                 continue
 
             title = entry.find('atom:title', ns).text
@@ -263,6 +292,13 @@ def check_updates():
                     # Save state immediately too, to prevent duplicate processing if crash
                     save_state(state) 
                     state_updated = False # Handled above
+                    
+                    # Rate Limiting: Sleep to avoid IP Ban
+                    import time
+                    import random
+                    sleep_time = random.uniform(30, 60)
+                    print(f"😴 休息 {sleep_time:.1f} 秒以避免觸發 Rate Limit...")
+                    time.sleep(sleep_time)
 
     # Write log file for record (optional batch write or append)
     if new_video_entries:

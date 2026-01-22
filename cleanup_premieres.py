@@ -4,7 +4,7 @@ import os
 VIDEOS_FILE = "videos.json"
 STATE_FILE = "monitor_state.json"
 
-IDS_TO_REMOVE = ["VSdV-AdSlis", "mwzk2rlwtZE"]
+IDS_TO_REMOVE = ["5YBjll9XJlw"]
 
 def clean_videos():
     if not os.path.exists(VIDEOS_FILE):
