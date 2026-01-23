@@ -47,3 +47,8 @@ LLM_MODEL=gpt-4o
 ### 逐字稿被 YouTube 封鎖 (IP Block)
 如果部署在 Zeabur/AWS/GCP 等雲端平台，YouTube 會封鎖其 IP。
 解決方案：購買 Residence Proxy (住宅代理) 或 Smart Proxy，並在環境變數設定 `HTTPS_PROXY`。
+
+### 如何手動新增影片
+以後如果您想手動新增特定影片，只需要在終端機執行：
+
+./.venv/bin/python3 add_video_manual.py "URL_HERE"
