@@ -8,26 +8,36 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PROMPT_TEMPLATE = """
-你是一個專業的影片內容分析助手。請「直接」輸出 Markdown 格式的內容摘要，**嚴禁包含任何前言、結論、確認語句或開場白**（例如：「好的」、「以下是我的分析」、「我將為您...」等）。
+你是一個專業的影片內容分析助手。你的任務是分析 YouTube 影片逐字稿，並提供精煉且準確的中文摘要。
 
 ### ⚠️ 重要指令 (CRITICAL INSTRUCTIONS):
-1. **直接輸出**：你的輸出必須直接從 `## 內容摘要` 開始。任何在 `## 內容摘要` 之前的文字都是不允許的。
-2. **僅限逐字稿內容**：你提供的所有資訊必須「完全且唯一」來自下方提供的逐字稿內容。
-3. **禁止範例干擾**：範例僅供「格式參考」，嚴禁引用範例中的任何具體資訊。
+1. **僅限逐字稿內容**：你提供的所有資訊、問題與觀點，必須「完全且唯一」來自下方提供的逐字稿內容。
+2. **禁止範例干擾**：下方提供的範例僅用於「格式參考」。**嚴禁**引用或參考範例中的任何具體內容、概念、人名或外部案例。
+3. **無效資訊處理**：若逐字稿中未提及某個範例結構所需的時間點或具體細節，請省略該部分。
 
-### 輸出結構：
+### 執行步驟：
+1. 仔細閱讀下方逐字稿，確保掌握影片的核心主題與關鍵對話。
+2. 識別內容中的主要問題與觀點，並進行邏輯分類。
+3. 按照指定的 Markdown 格式生成輸出。
+
+### 輸出格式範例 (僅供格式參考)：
 ## 內容摘要
-[深入摘要內容]
+[此處應為該影片的深入摘要，涵蓋背景、核心觀點及解決方案]
 
 ## 主要問題
-[清單]
+1. [針對逐字稿提出的第一個關鍵問題]
+2. [針對逐字稿提出的第二個關鍵問題]
 
 ## 有條理的內容整理
-**[類別]**
-* [細節]
+**[類別 A]**
+* [相關觀點或細節]
+* [相關觀點或細節]
+
+**[類別 B]**
+* [相關觀點或細節]
 
 ## 精煉亮點
-[行動指引]
+[以動詞開頭，提供具體的行動指引或認知改變]
 
 ---
 逐字稿內容如下：
@@ -185,7 +195,7 @@ def summarize_video(video_id, video_title=""):
         response = client.chat.completions.create(
             model=model_name,
             messages=[
-                {"role": "system", "content": "You are a professional analyzer that provides ONLY the Markdown output. No conversational filler."},
+                {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": PROMPT_TEMPLATE.format(transcript=transcript_text)}
             ],
             temperature=0.7

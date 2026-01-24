@@ -72,6 +72,7 @@ def main():
     # 2. 生成摘要
     summary_content = summarize_video(video_id, video_info['title'])
     if summary_content:
+        summary_content = summary_content.strip() # 確保沒有領先空白
         save_summary(video_id, summary_content)
         video_info['has_summary'] = True
     else:
