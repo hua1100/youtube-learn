@@ -340,7 +340,7 @@ const SummaryPanel = ({ video, onClose }) => {
                         {/* Content - Scrollable */}
                         <div
                             ref={contentRef}
-                            className={`flex-1 p-6 scroll-smooth relative ${selection ? 'overflow-hidden' : 'overflow-y-auto'}`}
+                            className={`flex-1 p-6 scroll-smooth relative overscroll-contain ${selection ? 'overflow-hidden' : 'overflow-y-auto'}`}
                         >
                             {mode === 'summary' ? (
                                 <div className="prose prose-slate prose-lg max-w-none 

@@ -33,7 +33,7 @@ const MacWindow = ({ children }) => {
                 </div>
 
                 {/* Content Area */}
-                <div className="flex-1 overflow-auto bg-slate-50/50 p-6 sm:p-8">
+                <div className="flex-1 overflow-y-auto overscroll-y-contain bg-slate-50/50 p-6 sm:p-8">
                     {children}
                 </div>
             </motion.div>

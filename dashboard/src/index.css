@@ -56,6 +56,17 @@
 }
 
 @layer base {
+
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Lock the page body */
+    overscroll-behavior: none;
+    /* Stop bounce effects globally */
+  }
+
   body {
     @apply bg-slate-50 text-slate-900 antialiased;
     font-feature-settings: 'cv11', 'ss01';
@@ -64,6 +75,7 @@
 
 /* Custom Highlight API style */
 ::highlight(obsidian-selection) {
-  background-color: #fef08a; /* Yellow-200 */
+  background-color: #fef08a;
+  /* Yellow-200 */
   color: #000;
 }

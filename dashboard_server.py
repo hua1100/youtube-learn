@@ -379,10 +379,16 @@ def reset_system():
 
 # Mount Frontend Static Files
 # Ensure this is after API routes so they are processed first
-if os.path.exists("dashboard/dist"):
-    app.mount("/", StaticFiles(directory="dashboard/dist", html=True), name="static")
+# Mount Frontend Static Files using Absolute Path
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DIST_DIR = os.path.join(BASE_DIR, "dashboard", "dist")
+
+if os.path.exists(DIST_DIR):
+    print(f"✅ Mounting static files from: {DIST_DIR}")
+    app.mount("/", StaticFiles(directory=DIST_DIR, html=True), name="static")
 else:
-    print("⚠️ Warning: dashboard/dist not found. Run 'npm run build' in dashboard/ folder.")
+    print(f"⚠️ Warning: dashboard/dist not found at: {DIST_DIR}")
+    print("Run 'npm run build' in dashboard/ folder.")
 
 if __name__ == "__main__":
     import uvicorn
