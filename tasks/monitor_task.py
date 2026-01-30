@@ -28,7 +28,8 @@ CHANNELS = [
     "https://www.youtube.com/@howiaipodcast",
     "https://www.youtube.com/@hamelhusain7140",
     "https://www.youtube.com/@StephenGPope",
-    "https://www.youtube.com/@anthropic-ai"
+    "https://www.youtube.com/@anthropic-ai",
+    "https://www.youtube.com/@GregIsenberg"
 ]
 
 def load_state():
@@ -230,6 +231,10 @@ def update_video_db(video_info):
             return
 
     history.insert(0, video_info) # Add to top
+    
+    # Sort by published date desc to ensure order is correct even if backfilling
+    history.sort(key=lambda x: x.get('published', ''), reverse=True)
+
     print(f"📚 立即新增影片到資料庫: {video_info['title']}")
     
     with open(history_file, 'w', encoding='utf-8') as f:
