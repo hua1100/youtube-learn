@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2 } from 'lucide-react';
+import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2, GitBranch } from 'lucide-react';
+import MindmapModal from './MindmapModal';
 import clsx from 'clsx';
 
 const VideoCard = ({ video, onViewSummary }) => {
@@ -8,6 +9,7 @@ const VideoCard = ({ video, onViewSummary }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [isThreadsLoading, setIsThreadsLoading] = useState(false);
     const [threadsStatus, setThreadsStatus] = useState('idle'); // 'idle' | 'success' | 'error'
+    const [isMindmapOpen, setIsMindmapOpen] = useState(false);
 
     // Gradient generator for tags
     const getTagStyle = (index) => {
@@ -145,6 +147,19 @@ const VideoCard = ({ video, onViewSummary }) => {
                             <CheckCircle2 size={18} className={clsx("transition-transform duration-300", isLoading && "animate-pulse")} />
                         </button>
 
+                        {/* Mindmap Button */}
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setIsMindmapOpen(true);
+                            }}
+                            title="生成心智圖"
+                            className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm border bg-slate-50 text-slate-500 border-slate-200 hover:bg-violet-50 hover:text-violet-600 hover:border-violet-200"
+                        >
+                            <GitBranch size={18} />
+                        </button>
+
                         {/* Threads Button */}
                         <button
                             onClick={handleThreadsSubmit}
@@ -207,6 +222,14 @@ const VideoCard = ({ video, onViewSummary }) => {
                 "h-1 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-opacity duration-300",
                 isRead ? "opacity-0" : "opacity-0 group-hover:opacity-100"
             )}></div>
+
+            {/* Mindmap Modal */}
+            <MindmapModal
+                isOpen={isMindmapOpen}
+                onClose={() => setIsMindmapOpen(false)}
+                videoId={video.id}
+                videoTitle={video.title}
+            />
         </motion.div>
     );
 };

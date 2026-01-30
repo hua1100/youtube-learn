@@ -244,6 +244,7 @@ class ChatRequest(BaseModel):
 from fastapi.responses import StreamingResponse
 
 from tasks.rag_service import get_or_create_store, chat_with_store_stream, is_file_indexed
+from tasks.mindmap_generator import generate_mindmap, mindmap_exists as check_mindmap_exists
 import os
 
 @app.post("/api/chat")
@@ -328,6 +329,24 @@ async def chat_with_video(request: ChatRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"LLM Error: {str(e)}")
+
+# === Mindmap API ===
+@app.get("/api/mindmap/{video_id}/exists")
+def get_mindmap_exists(video_id: str):
+    """檢查心智圖是否已生成"""
+    return {"exists": check_mindmap_exists(video_id)}
+
+@app.get("/api/mindmap/{video_id}")
+async def get_mindmap(video_id: str):
+    """生成或返回快取的心智圖 Mermaid 語法"""
+    try:
+        mermaid_code = generate_mindmap(video_id)
+        if mermaid_code:
+            return {"mermaid": mermaid_code}
+        else:
+            raise HTTPException(status_code=404, detail="無法生成心智圖，請確認逐字稿存在")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"生成心智圖時發生錯誤: {str(e)}")
 
 
 @app.get("/api/status")
