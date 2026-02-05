@@ -281,21 +281,29 @@ def check_updates():
                     print(entry.strip())
                     
                     # 觸發摘要生成
+                    summary_success = True
                     if video_info.get('id'):
                         summary_content = summarize_video(video_info['id'], video_info['title'])
                         if summary_content:
                             save_summary(video_info['id'], summary_content)
+                        else:
+                            # 如果摘要生成失敗（通常是 429 或抓不到逐字稿）
+                            # 我們選擇「不更新」state，讓下次 check_updates 重新抓取這部片。
+                            print(f"⚠️ 影片 {video_info['id']} 摘要生成失敗，本次不更新頻道狀態以利下次重試。")
+                            summary_success = False
                     
-                    # === Real-time Update: Save to DB Immediately ===
-                    update_video_db(video_info)
+                    if summary_success:
+                        # === Real-time Update: Save to DB Immediately ===
+                        update_video_db(video_info)
 
-                    if url not in state:
-                        state[url] = {}
-                    state[url]['last_video_link'] = current_video_link
-                    state[url]['last_video_title'] = video_info['title']
-                    state[url]['last_checked'] = datetime.now().isoformat()
-                    # Save state immediately too, to prevent duplicate processing if crash
-                    save_state(state) 
+                        if url not in state:
+                            state[url] = {}
+                        state[url]['last_video_link'] = current_video_link
+                        state[url]['last_video_title'] = video_info['title']
+                        state[url]['last_checked'] = datetime.now().isoformat()
+                        # Save state immediately too, to prevent duplicate processing if crash
+                        save_state(state) 
+                    
                     state_updated = False # Handled above
                     
                     # Rate Limiting: Sleep to avoid IP Ban
