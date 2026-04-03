@@ -28,7 +28,7 @@ const VideoCard = ({ video, onViewSummary }) => {
         e.stopPropagation();
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:8000/api/videos/${video.id}/toggle_read`, {
+            const response = await fetch(`/api/videos/${video.id}/toggle_read`, {
                 method: 'POST'
             });
             if (response.ok) {
