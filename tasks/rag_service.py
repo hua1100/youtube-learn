@@ -4,6 +4,7 @@ import time
 import logging
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -128,7 +129,7 @@ def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-1.5-fl
     response = _client.models.generate_content_stream(
         model=model_name,
         contents=[last_user_message, file_obj],
-        config={"system_instruction": system_instruction},
+        config=types.GenerateContentConfig(system_instruction=system_instruction),
     )
 
     for chunk in response:

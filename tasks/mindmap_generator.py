@@ -6,6 +6,7 @@ Mindmap Generator - 從 YouTube 影片逐字稿生成心智圖
 import os
 import json
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -136,7 +137,10 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
         response = _gemini_client.models.generate_content(
             model="gemini-1.5-flash",
             contents=MINDMAP_PROMPT.replace("{transcript}", transcript_text),
-            config={"system_instruction": "You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.", "temperature": 0.5},
+            config=types.GenerateContentConfig(
+                system_instruction="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.",
+                temperature=0.5,
+            ),
         )
 
         mermaid_code = response.text.strip()

@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 
 # 載入環境變數
@@ -126,7 +127,10 @@ def summarize_video(video_id, video_title=""):
         response = _gemini_client.models.generate_content(
             model="gemini-1.5-flash",
             contents=PROMPT_TEMPLATE.format(transcript=transcript_text),
-            config={"system_instruction": "You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.", "temperature": 0.7},
+            config=types.GenerateContentConfig(
+                system_instruction="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.",
+                temperature=0.7,
+            ),
         )
         summary = response.text
         if summary.startswith("```markdown"):
