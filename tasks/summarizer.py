@@ -44,7 +44,7 @@ def get_transcript_text(video_id, save_to_file=False):
     :return: 逐字稿純文字 string or None
     """
     # 1. 檢查本地快取
-    transcript_dir = os.path.join(os.path.dirname(__file__), "..", "transcripts")
+    transcript_dir = "/app/data/transcripts"
     os.makedirs(transcript_dir, exist_ok=True)
     file_path = os.path.join(transcript_dir, f"{video_id}.json")
 
@@ -113,13 +113,9 @@ def summarize_video(video_id, video_title=""):
         print("⚠️ 未設定 GEMINI_API_KEY，跳過摘要生成。")
         return None
 
-    transcript_text = get_transcript_text(video_id, save_to_file=True)
+    transcript_text = get_transcript_text(video_id, save_to_file=False)
     if not transcript_text:
         return None
-
-    if len(transcript_text) > 100000:
-        print("⚠️ 逐字稿過長，進行截斷...")
-        transcript_text = transcript_text[:100000]
 
     try:
         response = get_client().models.generate_content(
@@ -140,7 +136,7 @@ def summarize_video(video_id, video_title=""):
         return None
 
 def save_summary(video_id, content):
-    filename = f"summary_{video_id}.md"
+    filename = os.path.join("/app/data", f"summary_{video_id}.md")
     with open(filename, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"✅ 摘要已儲存至: {filename}")

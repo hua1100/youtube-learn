@@ -12,10 +12,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from tasks.summarizer import summarize_video, save_summary
 
-STATE_FILE = "monitor_state.json"
-OUTPUT_FILE = "new_videos.txt"
+DATA_DIR = "/app/data"
+os.makedirs(DATA_DIR, exist_ok=True)
+STATE_FILE = os.path.join(DATA_DIR, "monitor_state.json")
+OUTPUT_FILE = os.path.join(DATA_DIR, "new_videos.txt")
+CHANNELS_FILE = os.path.join(DATA_DIR, "channels.json")
 
-CHANNELS = [
+DEFAULT_CHANNELS = [
     "https://www.youtube.com/@LennysPodcast",
     "https://www.youtube.com/@googleantigravity",
     "https://www.youtube.com/@Google/videos",
@@ -30,6 +33,19 @@ CHANNELS = [
     "https://www.youtube.com/@anthropic-ai",
     "https://www.youtube.com/@GregIsenberg"
 ]
+
+def load_channels():
+    if os.path.exists(CHANNELS_FILE):
+        try:
+            with open(CHANNELS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return DEFAULT_CHANNELS
+
+def save_channels(channels):
+    with open(CHANNELS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(channels, f, ensure_ascii=False, indent=2)
 
 def load_state():
     if os.path.exists(STATE_FILE):
@@ -208,7 +224,7 @@ def update_video_db(video_info):
     """
     Helper function to update videos.json with a single video immediately.
     """
-    history_file = "videos.json"
+    history_file = os.path.join(DATA_DIR, "videos.json")
     history = []
     if os.path.exists(history_file):
         try:
@@ -241,7 +257,7 @@ def check_updates():
     state_updated = False
     new_video_entries = []
     
-    for url in CHANNELS:
+    for url in load_channels():
         print(f"👀 正在檢查: {url}")
         # 如果 state 中沒有緩存 channel_id，則重新獲取
         if url in state and 'channel_id' in state[url]:

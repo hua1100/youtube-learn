@@ -1,8 +1,9 @@
 import React, { useEffect, useState, Suspense, lazy } from 'react';
 import VideoCard from './VideoCard';
-import { Loader2, RefreshCw, Search, Filter } from 'lucide-react';
+import { Loader2, RefreshCw, Search, Rss } from 'lucide-react';
 
 const SummaryPanel = lazy(() => import('./SummaryPanel'));
+const ChannelManager = lazy(() => import('./ChannelManager'));
 
 const Dashboard = () => {
     const [videos, setVideos] = useState([]);
@@ -87,6 +88,7 @@ const Dashboard = () => {
         setSelectedVideo(null);
     };
 
+    const [isChannelManagerOpen, setIsChannelManagerOpen] = useState(false);
     const [isUpdating, setIsUpdating] = useState(false);
     const triggerUpdate = async () => {
         setIsUpdating(true);
@@ -175,6 +177,13 @@ const Dashboard = () => {
                     </p>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-slate-500">
+                    <button
+                        onClick={() => setIsChannelManagerOpen(true)}
+                        className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold hover:bg-slate-50 hover:text-indigo-600 transition-all shadow-sm"
+                    >
+                        <Rss size={14} />
+                        管理頻道
+                    </button>
                     <button
                         onClick={async () => {
                             if (confirm("⚠️ Are you sure you want to RESET the entire system?\nThis will delete all videos, summaries, and history to force a full re-ingestion.")) {
@@ -266,6 +275,13 @@ const Dashboard = () => {
                     onClose={closePanel}
                 />
             </Suspense>
+
+            {/* Channel Manager Modal */}
+            {isChannelManagerOpen && (
+                <Suspense fallback={null}>
+                    <ChannelManager onClose={() => setIsChannelManagerOpen(false)} />
+                </Suspense>
+            )}
         </div>
     );
 };

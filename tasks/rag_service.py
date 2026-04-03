@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 # Load Env
 load_dotenv()
 
-RAG_MAP_FILE = "rag_map.json"
+RAG_MAP_FILE = "/app/data/rag_map.json"
 
 def load_rag_map():
     if os.path.exists(RAG_MAP_FILE):

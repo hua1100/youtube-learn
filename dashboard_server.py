@@ -1,10 +1,13 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import StreamingResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 import json
 import os
 import sys
+import io
+import zipfile
 from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
@@ -13,7 +16,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 # Add 'tasks' module path
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-from tasks.monitor_task import check_updates
+from tasks.monitor_task import check_updates, load_channels, save_channels, get_channel_id_from_url
 
 # Initialize Scheduler
 scheduler = BackgroundScheduler()
@@ -49,8 +52,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 # Config
-VIDEOS_FILE = "videos.json"
-SUMMARY_DIR = "."
+DATA_DIR = "/app/data"
+os.makedirs(DATA_DIR, exist_ok=True)
+VIDEOS_FILE = os.path.join(DATA_DIR, "videos.json")
+SUMMARY_DIR = DATA_DIR
 
 # CORS
 app.add_middleware(
@@ -142,7 +147,7 @@ def get_videos():
     # Enrich with summary data
     results = []
     for v in videos:
-        summary_path = f"summary_{v['id']}.md"
+        summary_path = os.path.join(DATA_DIR, f"summary_{v['id']}.md")
         v['has_summary'] = os.path.exists(summary_path)
         v['preview'] = ""
         v['highlight'] = ""
@@ -190,7 +195,7 @@ def get_videos():
 
 @app.get("/api/summary/{video_id}")
 def get_summary(video_id: str):
-    filename = f"summary_{video_id}.md"
+    filename = os.path.join(DATA_DIR, f"summary_{video_id}.md")
     if not os.path.exists(filename):
         raise HTTPException(status_code=404, detail="Summary not found")
     
@@ -290,6 +295,35 @@ async def get_mindmap(video_id: str):
         raise HTTPException(status_code=500, detail=f"生成心智圖時發生錯誤: {str(e)}")
 
 
+@app.get("/api/channels")
+def get_channels_api():
+    return load_channels()
+
+class ChannelAddRequest(BaseModel):
+    url: str
+
+@app.post("/api/channels")
+def add_channel(req: ChannelAddRequest):
+    url = req.url.strip().rstrip("/")
+    if not url.startswith("https://www.youtube.com/"):
+        raise HTTPException(status_code=400, detail="請輸入有效的 YouTube 頻道網址")
+    channels = load_channels()
+    if url in channels:
+        raise HTTPException(status_code=409, detail="此頻道已在追蹤清單中")
+    channels.append(url)
+    save_channels(channels)
+    return {"ok": True, "channels": channels}
+
+@app.delete("/api/channels")
+def remove_channel(req: ChannelAddRequest):
+    channels = load_channels()
+    url = req.url.strip().rstrip("/")
+    if url not in channels:
+        raise HTTPException(status_code=404, detail="找不到此頻道")
+    channels.remove(url)
+    save_channels(channels)
+    return {"ok": True, "channels": channels}
+
 @app.get("/api/status")
 def get_status():
     return {
@@ -309,6 +343,22 @@ def refresh_data(background_tasks: BackgroundTasks):
     background_tasks.add_task(run_update_wrapper)
     return {"status": "Update started", "message": "The system is checking for updates in the background."}
 
+@app.get("/api/export")
+def export_data():
+    """臨時：打包所有資料為 zip 下載"""
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        for fname in os.listdir(DATA_DIR):
+            fpath = os.path.join(DATA_DIR, fname)
+            if os.path.isfile(fpath):
+                zf.write(fpath, fname)
+    buf.seek(0)
+    return StreamingResponse(
+        buf,
+        media_type="application/zip",
+        headers={"Content-Disposition": "attachment; filename=youtube_learn_backup.zip"}
+    )
+
 @app.post("/api/reset")
 def reset_system():
     """
@@ -318,13 +368,12 @@ def reset_system():
     if is_update_running:
         raise HTTPException(status_code=400, detail="Cannot reset while update is running.")
 
-    # Files to remove
-    files_to_remove = [VIDEOS_FILE, "monitor_state.json", "new_videos.txt"]
-    
-    # Remove summary files
-    for f in os.listdir("."):
+    files_to_remove = [VIDEOS_FILE,
+                       os.path.join(DATA_DIR, "monitor_state.json"),
+                       os.path.join(DATA_DIR, "new_videos.txt")]
+    for f in os.listdir(DATA_DIR):
         if f.startswith("summary_") and f.endswith(".md"):
-            files_to_remove.append(f)
+            files_to_remove.append(os.path.join(DATA_DIR, f))
 
     deleted = []
     for f in files_to_remove:
