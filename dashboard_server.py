@@ -1,13 +1,16 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, Response
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
 import json
 import os
 import sys
 import io
 import zipfile
+import base64
+import secrets
 from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
@@ -51,11 +54,38 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+# === Basic Auth Middleware ===
+class BasicAuthMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        password = os.getenv("DASHBOARD_PASSWORD")
+        if not password:
+            return await call_next(request)
+
+        auth = request.headers.get("Authorization", "")
+        if auth.startswith("Basic "):
+            try:
+                decoded = base64.b64decode(auth[6:]).decode("utf-8")
+                provided_username, provided_password = decoded.split(":", 1)
+                username = os.getenv("DASHBOARD_USERNAME", "admin")
+                if (secrets.compare_digest(provided_username, username) and
+                        secrets.compare_digest(provided_password, password)):
+                    return await call_next(request)
+            except Exception:
+                pass
+
+        return Response(
+            content="Unauthorized",
+            status_code=401,
+            headers={"WWW-Authenticate": 'Basic realm="YouTube Learn"'},
+        )
+
 # Config
 DATA_DIR = "/app/data"
 os.makedirs(DATA_DIR, exist_ok=True)
 VIDEOS_FILE = os.path.join(DATA_DIR, "videos.json")
 SUMMARY_DIR = DATA_DIR
+
+app.add_middleware(BasicAuthMiddleware)
 
 # CORS
 app.add_middleware(
@@ -67,8 +97,6 @@ app.add_middleware(
 )
 
 # === Level 1 Observability: Metrics Middleware ===
-from starlette.middleware.base import BaseHTTPMiddleware
-from starlette.requests import Request
 import time
 
 # Metrics Storage (In-Memory)
@@ -112,6 +140,11 @@ class MetricsMiddleware(BaseHTTPMiddleware):
                  metrics["avg_latency_ms"] = (metrics["avg_latency_ms"] * 0.9) + (process_time * 0.1)
 
 app.add_middleware(MetricsMiddleware)
+
+@app.get("/api/debug/auth")
+def debug_auth():
+    password = os.getenv("DASHBOARD_PASSWORD")
+    return {"DASHBOARD_PASSWORD_set": password is not None, "value_length": len(password) if password else 0}
 
 @app.get("/api/health_stats")
 def get_health_stats():
