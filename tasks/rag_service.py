@@ -100,34 +100,30 @@ def get_or_create_store(video_id, transcript_path):
 
     return myfile
 
-def is_file_indexed(video_id):
-    rag_map = load_rag_map()
-    return video_id in rag_map
-
-def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-2.5-flash"):
+def chat_with_transcript_stream(transcript_text: str, messages: list, model_name: str = "gemini-2.5-flash"):
     """
-    Streams chat response using Gemini Long Context (passing file directly).
+    直接把逐字稿文字塞進 prompt 進行對話，不需要 Files API。
+    Gemini 2.5-flash 有 1M token context，足以容納完整逐字稿。
     """
-    if isinstance(file_obj_or_name, str):
-        file_obj = get_client().files.get(name=file_obj_or_name)
-    else:
-        file_obj = file_obj_or_name
-
     last_user_message = messages[-1]['content']
-    logger.info(f"Querying Gemini (Long Context) with file {file_obj.name}...")
 
-    system_instruction = """You are a professional research assistant analyzing a video transcript.
+    prompt = f"""你是一位專業的影片逐字稿分析助手。
 
-    Rules:
-    1. Answer the user's question based on the provided video transcript.
-    2. If the answer is not explicitly stated, try to infer it from the context. If you still can't find it, state that it's not in the transcript.
-    3. Output in Traditional Chinese (繁體中文/台灣用語) naturally.
-    4. Provide comprehensive and helpful answers.
-    """
+規則：
+1. 根據下方提供的逐字稿內容回答問題。
+2. 若答案未明確提及，嘗試從上下文推斷；若真的找不到，明確說明。
+3. 用繁體中文（台灣用語）回答。
+4. 提供詳盡且有幫助的回答。
+
+===逐字稿內容===
+{transcript_text}
+================
+
+使用者問題：{last_user_message}"""
 
     response = get_client().models.generate_content_stream(
         model=model_name,
-        contents=[system_instruction + "\n\n" + last_user_message, file_obj],
+        contents=prompt,
     )
 
     for chunk in response:

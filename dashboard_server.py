@@ -237,7 +237,7 @@ class ChatRequest(BaseModel):
 
 from fastapi.responses import StreamingResponse
 
-from tasks.rag_service import get_or_create_store, chat_with_store_stream, is_file_indexed
+from tasks.rag_service import chat_with_transcript_stream
 from tasks.mindmap_generator import generate_mindmap, mindmap_exists as check_mindmap_exists
 import os
 
@@ -254,26 +254,21 @@ async def chat_with_video(request: ChatRequest):
     if not gemini_key:
         raise HTTPException(status_code=500, detail="未設定 GEMINI_API_KEY。")
 
-    async def rag_generate():
+    async def generate():
         try:
-            if not is_file_indexed(video_id):
-                yield "🔄 [System] Initializing knowledge base for this video... (This happens only once)\n\n"
-                yield "---\n"
+            transcript_text = get_transcript_text(video_id, save_to_file=True)
+            if not transcript_text:
+                yield "[Error: 找不到逐字稿]"
+                return
 
-            transcript_path = os.path.abspath(f"transcripts/{video_id}.json")
-            if not os.path.exists(transcript_path):
-                get_transcript_text(video_id, save_to_file=True)
-
-            file_obj = get_or_create_store(video_id, transcript_path)
-            rag_stream = chat_with_store_stream(file_obj, messages)
-            for chunk in rag_stream:
+            for chunk in chat_with_transcript_stream(transcript_text, messages):
                 yield chunk
 
         except Exception as e:
-            print(f"RAG Error: {e}")
+            print(f"Chat Error: {e}")
             yield f"\n[Error: {str(e)}]"
 
-    return StreamingResponse(rag_generate(), media_type="text/event-stream")
+    return StreamingResponse(generate(), media_type="text/event-stream")
 
 # === Mindmap API ===
 @app.get("/api/mindmap/{video_id}/exists")
