@@ -126,7 +126,7 @@ def summarize_video(video_id, video_title=""):
 
     try:
         model = genai.GenerativeModel(
-            "gemini-2.0-flash",
+            "gemini-1.5-flash",
             system_instruction="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.",
         )
         response = model.generate_content(

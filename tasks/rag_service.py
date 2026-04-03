@@ -109,7 +109,7 @@ def get_or_create_store(video_id, transcript_path):
     
     return myfile
 
-def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-2.0-flash"):
+def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-1.5-flash"):
     """
     Streams chat response using Gemini Long Context (passing file directly).
     """
@@ -136,7 +136,7 @@ def is_file_indexed(video_id):
         return True
     return False
 
-def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-2.0-flash"):
+def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-1.5-flash"):
     """
     Streams chat response using Gemini Long Context (passing file directly).
     """

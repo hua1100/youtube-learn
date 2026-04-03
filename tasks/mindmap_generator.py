@@ -136,7 +136,7 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
 
     try:
         model = genai.GenerativeModel(
-            "gemini-2.0-flash",
+            "gemini-1.5-flash",
             system_instruction="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.",
         )
         response = model.generate_content(
