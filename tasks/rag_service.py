@@ -104,7 +104,7 @@ def is_file_indexed(video_id):
     rag_map = load_rag_map()
     return video_id in rag_map
 
-def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-2.0-flash"):
+def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-2.5-flash"):
     """
     Streams chat response using Gemini Long Context (passing file directly).
     """

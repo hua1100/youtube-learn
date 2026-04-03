@@ -115,7 +115,7 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
 
     try:
         response = get_client().models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.\n\n" + MINDMAP_PROMPT.replace("{transcript}", transcript_text),
             config=types.GenerateContentConfig(temperature=0.5),
         )

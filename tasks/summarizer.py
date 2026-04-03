@@ -123,7 +123,7 @@ def summarize_video(video_id, video_title=""):
 
     try:
         response = get_client().models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.\n\n" + PROMPT_TEMPLATE.format(transcript=transcript_text),
             config=types.GenerateContentConfig(temperature=0.7),
         )
