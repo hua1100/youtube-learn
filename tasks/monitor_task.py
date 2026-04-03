@@ -11,7 +11,6 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from tasks.summarizer import summarize_video, save_summary
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, VideoUnavailable
 
 STATE_FILE = "monitor_state.json"
 OUTPUT_FILE = "new_videos.txt"
@@ -94,22 +93,15 @@ def is_shorts(video_id):
 def is_premiere(video_id):
     """
     Check if a video is a Premiere (not yet available).
-    Relies on YouTubeTranscriptApi throwing a specific error for premieres.
+    Detects by checking for "Premieres in" or scheduledStartTime in the video page HTML.
     """
     try:
-        # Just try to fetch transcripts.
-        yt_api = YouTubeTranscriptApi()
-        yt_api.fetch(video_id, languages=['en']) # Language doesn't matter for checking availability
-        return False
-    except VideoUnavailable as e:
-        if "Premieres in" in str(e):
-             return True
-        return False
-    except Exception as e:
-        # Check string for generic exceptions too, as seen in tests
-        if "Premieres in" in str(e):
+        url = f"https://www.youtube.com/watch?v={video_id}"
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if "Premieres in" in resp.text or '"premiereTimestamp"' in resp.text:
             return True
-        # Other errors (e.g. no transcripts but video exists) are not "Premiere" state
+        return False
+    except Exception:
         return False
 
 def is_upcoming_live(video_id):

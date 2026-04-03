@@ -1,11 +1,15 @@
 import os
 import json
-from openai import OpenAI
-from youtube_transcript_api import YouTubeTranscriptApi
+import requests
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 # 載入環境變數
 load_dotenv()
+
+_gemini_key = os.getenv("GEMINI_API_KEY")
+if _gemini_key:
+    genai.configure(api_key=_gemini_key)
 
 PROMPT_TEMPLATE = """
 你是一個專業的影片內容分析助手。請「直接」輸出 Markdown 格式的內容摘要，**嚴禁包含任何前言、結論、確認語句或開場白**（例如：「好的」、「以下是我的分析」、「我將為您...」等）。
@@ -37,12 +41,12 @@ PROMPT_TEMPLATE = """
 
 def get_transcript_text(video_id, save_to_file=False):
     """
-    獲取逐字稿文字。
+    獲取逐字稿文字（透過 Supadata API）。
     :param video_id: YouTube Video ID
     :param save_to_file: 是否儲存為 JSON 檔案 (transcripts/{video_id}.json)
     :return: 逐字稿純文字 string or None
     """
-    # 1. Check if local file exists
+    # 1. 檢查本地快取
     transcript_dir = os.path.join(os.path.dirname(__file__), "..", "transcripts")
     os.makedirs(transcript_dir, exist_ok=True)
     file_path = os.path.join(transcript_dir, f"{video_id}.json")
@@ -58,139 +62,78 @@ def get_transcript_text(video_id, save_to_file=False):
         except Exception as e:
             print(f"⚠️ 讀取本地逐字稿失敗 ({video_id}): {e}")
 
-    try:
-        yt_api = YouTubeTranscriptApi()
-        transcript_obj = yt_api.fetch(video_id, languages=['zh-TW', 'zh', 'en'])
-        
-        if transcript_obj:
-            if save_to_file:
-                try:
-                    serializable = []
-                    for item in transcript_obj:
-                        serializable.append({
-                            'text': item.text if hasattr(item, 'text') else item.get('text'),
-                            'start': item.start if hasattr(item, 'start') else item.get('start'),
-                            'duration': item.duration if hasattr(item, 'duration') else item.get('duration')
-                        })
-                    
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(serializable, f, ensure_ascii=False, indent=2)
-                        print(f"✅ 逐字稿已緩存至: {file_path}")
-                except Exception as e:
-                    print(f"⚠️ 緩存逐字稿失敗: {e}")
-
-            full_text = " ".join([snippet.text for snippet in transcript_obj])
-            return full_text
+    # 2. 透過 Supadata API 獲取逐字稿
+    api_key = os.getenv("SUPADATA_API_KEY")
+    if not api_key:
+        print("❌ 未設定 SUPADATA_API_KEY，無法獲取逐字稿。")
         return None
-    except Exception as e:
-        print(f"❌ 傳統 API 獲取逐字稿失敗 ({video_id}): {e}")
-        print("🔄 嘗試使用 yt-dlp 備援機制...")
-        
-        try:
-            import yt_dlp
-            
-            url = f"https://www.youtube.com/watch?v={video_id}"
-            ydl_opts = {
-                'skip_download': True,
-                'writeautomaticsub': True,
-                'writesubtitles': True,
-                'subtitleslangs': ['zh-TW', 'zh', 'en'],
-                'quiet': True,
-                'no_warnings': True,
-            }
-            
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                info = ydl.extract_info(url, download=False)
-                subtitles = info.get('subtitles', {}) or info.get('automatic_captions', {})
-                lang_priority = ['zh-TW', 'zh-Hant', 'zh', 'zh-Hans', 'en']
-                selected_lang = None
-                
-                for lang in lang_priority:
-                     if lang in subtitles:
-                         selected_lang = lang
-                         break
-                
-                if not selected_lang and subtitles:
-                    selected_lang = list(subtitles.keys())[0]
-                    
-                if selected_lang:
-                    print(f"✅ 找到字幕語言: {selected_lang}")
-                    try:
-                        temp_filename = f"temp_sub_{video_id}"
-                        ydl_opts_download = {
-                            'skip_download': True,
-                            'writesubtitles': True,
-                            'writeautomaticsub': True,
-                            'subtitleslangs': [selected_lang],
-                            'outtmpl': temp_filename,
-                            'quiet': True,
-                            'no_warnings': True,
-                            'extractor_args': {'youtube': {'player_client': ['android']}},
-                        }
-                        
-                        with yt_dlp.YoutubeDL(ydl_opts_download) as ydl_down:
-                            ydl_down.download([url])
-                        
-                        expected_file = f"{temp_filename}.{selected_lang}.vtt"
-                        if not os.path.exists(expected_file):
-                             for f in os.listdir('.'):
-                                 if f.startswith(temp_filename) and f.endswith('.vtt'):
-                                     expected_file = f
-                                     break
-                        
-                        if os.path.exists(expected_file):
-                            with open(expected_file, 'r', encoding='utf-8') as f:
-                                raw_content = f.read()
-                            os.remove(expected_file)
-                            lines = raw_content.splitlines()
-                            text_lines = []
-                            for line in lines:
-                                if '-->' in line or line.strip() == 'WEBVTT' or not line.strip():
-                                    continue
-                                text_lines.append(line.strip())
-                            unique_lines = []
-                            last = ""
-                            for line in text_lines:
-                                if line != last:
-                                    unique_lines.append(line)
-                                    last = line
-                                    
-                            return " ".join(unique_lines)
-                    except Exception as dl_err:
-                        print(f"❌ yt-dlp 下載流程失敗: {dl_err}")
-        except Exception as yt_e:
-            print(f"❌ yt-dlp 備援失敗: {yt_e}")
+
+    try:
+        resp = requests.get(
+            "https://api.supadata.ai/v1/youtube/transcript",
+            params={"videoId": video_id},
+            headers={"x-api-key": api_key},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        content = data.get("content", [])
+        if not content:
+            print(f"❌ Supadata 回傳空逐字稿 ({video_id})")
             return None
+
+        if isinstance(content, str):
+            # text=true 模式，直接返回文字
+            return content
+
+        # 結構化模式：[{"text": "...", "offset": 0, "duration": 1500}]
+        if save_to_file:
+            try:
+                serializable = [
+                    {
+                        "text": item.get("text", ""),
+                        "start": item.get("offset", 0) / 1000.0,
+                        "duration": item.get("duration", 0) / 1000.0,
+                    }
+                    for item in content
+                ]
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump(serializable, f, ensure_ascii=False, indent=2)
+                print(f"✅ 逐字稿已緩存至: {file_path}")
+            except Exception as e:
+                print(f"⚠️ 緩存逐字稿失敗: {e}")
+
+        return " ".join([item.get("text", "") for item in content])
+
+    except Exception as e:
+        print(f"❌ Supadata API 獲取逐字稿失敗 ({video_id}): {e}")
+        return None
 
 def summarize_video(video_id, video_title=""):
     print(f"🤖 正在為影片產生摘要: {video_id} - {video_title}...")
-    api_key = os.getenv("LLM_API_KEY")
-    base_url = os.getenv("LLM_BASE_URL")
-    model_name = os.getenv("LLM_MODEL", "gpt-4o")
-    
-    if not api_key or not base_url:
-        print("⚠️ 未設定 LLM_API_KEY 或 LLM_BASE_URL，跳過摘要生成。")
+    if not os.getenv("GEMINI_API_KEY"):
+        print("⚠️ 未設定 GEMINI_API_KEY，跳過摘要生成。")
         return None
 
     transcript_text = get_transcript_text(video_id, save_to_file=True)
     if not transcript_text:
         return None
-    
+
     if len(transcript_text) > 100000:
         print("⚠️ 逐字稿過長，進行截斷...")
         transcript_text = transcript_text[:100000]
 
     try:
-        client = OpenAI(api_key=api_key, base_url=base_url)
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are a professional analyzer that provides ONLY the Markdown output. No conversational filler."},
-                {"role": "user", "content": PROMPT_TEMPLATE.format(transcript=transcript_text)}
-            ],
-            temperature=0.7
+        model = genai.GenerativeModel(
+            "gemini-2.0-flash",
+            system_instruction="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.",
         )
-        summary = response.choices[0].message.content
+        response = model.generate_content(
+            PROMPT_TEMPLATE.format(transcript=transcript_text),
+            generation_config={"temperature": 0.7},
+        )
+        summary = response.text
         if summary.startswith("```markdown"):
             summary = summary.replace("```markdown", "", 1)
         if summary.startswith("```"):

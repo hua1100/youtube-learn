@@ -190,7 +190,7 @@ const SummaryPanel = ({ video, onClose }) => {
     };
     const handleThreadsSubmit = async () => {
         const webhookUrl = import.meta.env.VITE_THREADS_WEBHOOK_URL;
-        if (!webhookUrl || webhookUrl === 'your_webhook_url_here') {
+        if (!webhookUrl) {
             alert("Please configure VITE_THREADS_WEBHOOK_URL in your .env file");
             return;
         }

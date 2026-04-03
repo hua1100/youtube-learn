@@ -94,9 +94,14 @@ class TaskScheduler:
         """啟動排程器"""
         jobs = self.load_config()
         print(f"載入 {len(jobs)} 個任務配置...")
+        loaded_funcs = []
         for job in jobs:
             try:
                 self.add_job(job)
+                # 記錄已載入的函數，啟動後立即執行一次
+                func = self.get_function(job['func'])
+                if func:
+                    loaded_funcs.append((job['id'], func, job.get('args', [])))
             except Exception as e:
                 print(f"❌ 添加任務 {job.get('id')} 失敗: {e}")
         
@@ -104,6 +109,14 @@ class TaskScheduler:
             self.scheduler.start()
             print("🚀 排程器已啟動")
             self.list_jobs()
+
+            # 啟動後立即執行所有任務一次
+            for job_id, func, args in loaded_funcs:
+                print(f"⚡ 立即執行任務: {job_id}")
+                try:
+                    func(*args)
+                except Exception as e:
+                    print(f"❌ 立即執行 {job_id} 失敗: {e}")
         else:
             print("⚠️ 沒有有效任務，排程器未啟動")
     

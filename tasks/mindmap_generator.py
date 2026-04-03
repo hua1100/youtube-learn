@@ -1,14 +1,18 @@
 """
 Mindmap Generator - 從 YouTube 影片逐字稿生成心智圖
-使用 OpenAI API 提取階層式主題結構，輸出 Mermaid mindmap 語法
+使用 Gemini API 提取階層式主題結構，輸出 Mermaid mindmap 語法
 """
 
 import os
 import json
-from openai import OpenAI
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
+
+_gemini_key = os.getenv("GEMINI_API_KEY")
+if _gemini_key:
+    genai.configure(api_key=_gemini_key)
 
 # 快取目錄
 MINDMAP_DIR = os.path.join(os.path.dirname(__file__), "..", "mindmaps")
@@ -123,35 +127,24 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
         print("⚠️ 逐字稿過長，進行截斷...")
         transcript_text = transcript_text[:50000]
     
-    # 3. 使用 OpenAI 生成心智圖
-    api_key = os.getenv("LLM_API_KEY")
-    base_url = os.getenv("LLM_BASE_URL")
-    model_name = os.getenv("LLM_MODEL", "gpt-4o")
-    
-    if not api_key or not base_url:
-        print("⚠️ 未設定 LLM_API_KEY 或 LLM_BASE_URL")
+    # 3. 使用 Gemini 生成心智圖
+    if not os.getenv("GEMINI_API_KEY"):
+        print("⚠️ 未設定 GEMINI_API_KEY")
         return None
-    
+
     print(f"🧠 正在生成心智圖: {video_id}...")
-    
+
     try:
-        client = OpenAI(api_key=api_key, base_url=base_url)
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {
-                    "role": "system", 
-                    "content": "You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation."
-                },
-                {
-                    "role": "user", 
-                    "content": MINDMAP_PROMPT.replace("{transcript}", transcript_text)
-                }
-            ],
-            temperature=0.5
+        model = genai.GenerativeModel(
+            "gemini-2.0-flash",
+            system_instruction="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.",
         )
-        
-        mermaid_code = response.choices[0].message.content.strip()
+        response = model.generate_content(
+            MINDMAP_PROMPT.replace("{transcript}", transcript_text),
+            generation_config={"temperature": 0.5},
+        )
+
+        mermaid_code = response.text.strip()
         
         # 清理可能的 markdown 包裝
         if mermaid_code.startswith("```mermaid"):
