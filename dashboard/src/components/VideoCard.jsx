@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2, GitBranch } from 'lucide-react';
-import MindmapModal from './MindmapModal';
 import clsx from 'clsx';
+
+const MindmapModal = lazy(() => import('./MindmapModal'));
 
 const VideoCard = ({ video, onViewSummary }) => {
     const [isRead, setIsRead] = useState(video.is_read || false);
@@ -223,13 +224,17 @@ const VideoCard = ({ video, onViewSummary }) => {
                 isRead ? "opacity-0" : "opacity-0 group-hover:opacity-100"
             )}></div>
 
-            {/* Mindmap Modal */}
-            <MindmapModal
-                isOpen={isMindmapOpen}
-                onClose={() => setIsMindmapOpen(false)}
-                videoId={video.id}
-                videoTitle={video.title}
-            />
+            {/* Mindmap Modal — lazy loaded，mermaid bundle 只在開啟時才下載 */}
+            {isMindmapOpen && (
+                <Suspense fallback={null}>
+                    <MindmapModal
+                        isOpen={isMindmapOpen}
+                        onClose={() => setIsMindmapOpen(false)}
+                        videoId={video.id}
+                        videoTitle={video.title}
+                    />
+                </Suspense>
+            )}
         </motion.div>
     );
 };

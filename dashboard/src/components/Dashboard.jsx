@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import VideoCard from './VideoCard';
-import SummaryPanel from './SummaryPanel';
 import { Loader2, RefreshCw, Search, Filter } from 'lucide-react';
+
+const SummaryPanel = lazy(() => import('./SummaryPanel'));
 
 const Dashboard = () => {
     const [videos, setVideos] = useState([]);
@@ -258,11 +259,15 @@ const Dashboard = () => {
                 </div>
             )}
 
-            {/* Side Panel for Detail View */}
-            <SummaryPanel
-                video={selectedVideo}
-                onClose={closePanel}
-            />
+            {/* Side Panel for Detail View — lazy loaded */}
+            {selectedVideo && (
+                <Suspense fallback={null}>
+                    <SummaryPanel
+                        video={selectedVideo}
+                        onClose={closePanel}
+                    />
+                </Suspense>
+            )}
         </div>
     );
 };
