@@ -5,14 +5,12 @@ Mindmap Generator - 從 YouTube 影片逐字稿生成心智圖
 
 import os
 import json
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
 
-_gemini_key = os.getenv("GEMINI_API_KEY")
-if _gemini_key:
-    genai.configure(api_key=_gemini_key)
+_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # 快取目錄
 MINDMAP_DIR = os.path.join(os.path.dirname(__file__), "..", "mindmaps")
@@ -135,13 +133,10 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
     print(f"🧠 正在生成心智圖: {video_id}...")
 
     try:
-        model = genai.GenerativeModel(
-            "gemini-1.5-flash",
-            system_instruction="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.",
-        )
-        response = model.generate_content(
-            MINDMAP_PROMPT.replace("{transcript}", transcript_text),
-            generation_config={"temperature": 0.5},
+        response = _gemini_client.models.generate_content(
+            model="gemini-1.5-flash",
+            contents=MINDMAP_PROMPT.replace("{transcript}", transcript_text),
+            config={"system_instruction": "You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.", "temperature": 0.5},
         )
 
         mermaid_code = response.text.strip()

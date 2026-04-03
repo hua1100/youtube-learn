@@ -1,15 +1,13 @@
 import os
 import json
 import requests
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 # 載入環境變數
 load_dotenv()
 
-_gemini_key = os.getenv("GEMINI_API_KEY")
-if _gemini_key:
-    genai.configure(api_key=_gemini_key)
+_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 PROMPT_TEMPLATE = """
 你是一個專業的影片內容分析助手。請「直接」輸出 Markdown 格式的內容摘要，**嚴禁包含任何前言、結論、確認語句或開場白**（例如：「好的」、「以下是我的分析」、「我將為您...」等）。
@@ -125,13 +123,10 @@ def summarize_video(video_id, video_title=""):
         transcript_text = transcript_text[:100000]
 
     try:
-        model = genai.GenerativeModel(
-            "gemini-1.5-flash",
-            system_instruction="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.",
-        )
-        response = model.generate_content(
-            PROMPT_TEMPLATE.format(transcript=transcript_text),
-            generation_config={"temperature": 0.7},
+        response = _gemini_client.models.generate_content(
+            model="gemini-1.5-flash",
+            contents=PROMPT_TEMPLATE.format(transcript=transcript_text),
+            config={"system_instruction": "You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.", "temperature": 0.7},
         )
         summary = response.text
         if summary.startswith("```markdown"):
