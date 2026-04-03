@@ -72,10 +72,3 @@
     font-feature-settings: 'cv11', 'ss01';
   }
 }
-
-/* Custom Highlight API style */
-::highlight(obsidian-selection) {
-  background-color: #fef08a;
-  /* Yellow-200 */
-  color: #000;
-}
