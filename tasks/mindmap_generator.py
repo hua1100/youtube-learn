@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"), http_options={"api_version": "v1"})
 
 # 快取目錄
 MINDMAP_DIR = os.path.join(os.path.dirname(__file__), "..", "mindmaps")

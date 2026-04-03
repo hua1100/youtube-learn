@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Load Env
 load_dotenv()
-_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"), http_options={"api_version": "v1"})
 
 RAG_MAP_FILE = "rag_map.json"
 
