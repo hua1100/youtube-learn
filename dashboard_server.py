@@ -141,11 +141,6 @@ class MetricsMiddleware(BaseHTTPMiddleware):
 
 app.add_middleware(MetricsMiddleware)
 
-@app.get("/api/debug/auth")
-def debug_auth():
-    password = os.getenv("DASHBOARD_PASSWORD")
-    return {"DASHBOARD_PASSWORD_set": password is not None, "value_length": len(password) if password else 0}
-
 @app.get("/api/health_stats")
 def get_health_stats():
     """
