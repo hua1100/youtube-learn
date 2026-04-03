@@ -5,13 +5,12 @@ Mindmap Generator - 從 YouTube 影片逐字稿生成心智圖
 
 import os
 import json
-from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+from tasks.gemini_client import get_client
+from tasks.summarizer import get_transcript_text
 
 load_dotenv()
-
-_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"), http_options={"api_version": "v1"})
 
 # 快取目錄
 MINDMAP_DIR = os.path.join(os.path.dirname(__file__), "..", "mindmaps")
@@ -80,25 +79,6 @@ def save_mindmap(video_id: str, mermaid_code: str) -> None:
     print(f"✅ 心智圖已快取至: {cache_path}")
 
 
-def get_transcript_text(video_id: str) -> str | None:
-    """讀取逐字稿文字"""
-    transcript_dir = os.path.join(os.path.dirname(__file__), "..", "transcripts")
-    file_path = os.path.join(transcript_dir, f"{video_id}.json")
-    
-    if not os.path.exists(file_path):
-        return None
-    
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            if isinstance(data, list):
-                return " ".join([item.get('text', '') for item in data])
-            elif isinstance(data, dict) and 'text' in data:
-                return data['text']
-    except Exception as e:
-        print(f"⚠️ 讀取逐字稿失敗 ({video_id}): {e}")
-    return None
-
 
 def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | None:
     """
@@ -134,8 +114,8 @@ def generate_mindmap(video_id: str, force_regenerate: bool = False) -> str | Non
     print(f"🧠 正在生成心智圖: {video_id}...")
 
     try:
-        response = _gemini_client.models.generate_content(
-            model="gemini-1.5-flash",
+        response = get_client().models.generate_content(
+            model="gemini-2.0-flash",
             contents="You are a content structure expert. Output ONLY Mermaid mindmap syntax, no explanation.\n\n" + MINDMAP_PROMPT.replace("{transcript}", transcript_text),
             config=types.GenerateContentConfig(temperature=0.5),
         )

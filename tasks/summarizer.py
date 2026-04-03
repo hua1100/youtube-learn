@@ -1,14 +1,12 @@
 import os
 import json
 import requests
-from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+from tasks.gemini_client import get_client
 
 # 載入環境變數
 load_dotenv()
-
-_gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"), http_options={"api_version": "v1"})
 
 PROMPT_TEMPLATE = """
 你是一個專業的影片內容分析助手。請「直接」輸出 Markdown 格式的內容摘要，**嚴禁包含任何前言、結論、確認語句或開場白**（例如：「好的」、「以下是我的分析」、「我將為您...」等）。
@@ -124,8 +122,8 @@ def summarize_video(video_id, video_title=""):
         transcript_text = transcript_text[:100000]
 
     try:
-        response = _gemini_client.models.generate_content(
-            model="gemini-1.5-flash",
+        response = get_client().models.generate_content(
+            model="gemini-2.0-flash",
             contents="You are a professional analyzer that provides ONLY the Markdown output. No conversational filler.\n\n" + PROMPT_TEMPLATE.format(transcript=transcript_text),
             config=types.GenerateContentConfig(temperature=0.7),
         )
