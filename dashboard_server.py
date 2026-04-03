@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from starlette.middleware.base import BaseHTTPMiddleware
 import json
 import os
 import sys
@@ -342,8 +343,21 @@ def reset_system():
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DIST_DIR = os.path.join(BASE_DIR, "dashboard", "dist")
 
+class StaticCacheMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        response = await call_next(request)
+        path = request.url.path
+        if path.startswith("/assets/"):
+            # Vite 產出的 assets 都有 content hash，可以永久快取
+            response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+        elif path == "/" or path.endswith(".html"):
+            # HTML 不快取，確保總是拿到最新版
+            response.headers["Cache-Control"] = "no-cache"
+        return response
+
 if os.path.exists(DIST_DIR):
     print(f"✅ Mounting static files from: {DIST_DIR}")
+    app.add_middleware(StaticCacheMiddleware)
     app.mount("/", StaticFiles(directory=DIST_DIR, html=True), name="static")
 else:
     print(f"⚠️ Warning: dashboard/dist not found at: {DIST_DIR}")
