@@ -128,8 +128,7 @@ def chat_with_store_stream(file_obj_or_name, messages, model_name="gemini-1.5-fl
 
     response = _client.models.generate_content_stream(
         model=model_name,
-        contents=[last_user_message, file_obj],
-        config=types.GenerateContentConfig(system_instruction=system_instruction),
+        contents=[system_instruction + "\n\n" + last_user_message, file_obj],
     )
 
     for chunk in response:
