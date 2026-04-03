@@ -260,14 +260,12 @@ const Dashboard = () => {
             )}
 
             {/* Side Panel for Detail View — lazy loaded */}
-            {selectedVideo && (
-                <Suspense fallback={null}>
-                    <SummaryPanel
-                        video={selectedVideo}
-                        onClose={closePanel}
-                    />
-                </Suspense>
-            )}
+            <Suspense fallback={null}>
+                <SummaryPanel
+                    video={selectedVideo}
+                    onClose={closePanel}
+                />
+            </Suspense>
         </div>
     );
 };
