@@ -305,6 +305,15 @@ async def chat_with_video(request: ChatRequest):
     return StreamingResponse(generate(), media_type="text/event-stream")
 
 # === Mindmap API ===
+@app.get("/api/transcript/{video_id}")
+def get_transcript(video_id: str):
+    """返回逐字稿純文字"""
+    transcript = get_transcript_text(video_id, save_to_file=True)
+    if not transcript:
+        raise HTTPException(status_code=404, detail="找不到逐字稿")
+    return {"transcript": transcript}
+
+# === Mindmap API ===
 @app.get("/api/mindmap/{video_id}/exists")
 def get_mindmap_exists(video_id: str):
     """檢查心智圖是否已生成"""

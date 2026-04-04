@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2, GitBranch } from 'lucide-react';
+import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2, GitBranch, FileDown } from 'lucide-react';
 import clsx from 'clsx';
 
 const MindmapModal = lazy(() => import('./MindmapModal'));
@@ -11,6 +11,7 @@ const VideoCard = ({ video, onViewSummary }) => {
     const [isThreadsLoading, setIsThreadsLoading] = useState(false);
     const [threadsStatus, setThreadsStatus] = useState('idle'); // 'idle' | 'success' | 'error'
     const [isMindmapOpen, setIsMindmapOpen] = useState(false);
+    const [isTranscriptDownloading, setIsTranscriptDownloading] = useState(false);
 
     // Gradient generator for tags
     const getTagStyle = (index) => {
@@ -96,6 +97,29 @@ const VideoCard = ({ video, onViewSummary }) => {
         }
     };
 
+    const handleDownloadTranscript = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsTranscriptDownloading(true);
+        try {
+            const res = await fetch(`/api/transcript/${video.id}`);
+            if (!res.ok) throw new Error('找不到逐字稿');
+            const data = await res.json();
+            const md = `# ${video.title}\n\n${data.transcript}`;
+            const blob = new Blob([md], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${video.title.replace(/[/\\?%*:|"<>]/g, '-')}.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+        } catch (err) {
+            alert('下載逐字稿失敗：' + err.message);
+        } finally {
+            setIsTranscriptDownloading(false);
+        }
+    };
+
     return (
         <motion.div
             layout
@@ -159,6 +183,20 @@ const VideoCard = ({ video, onViewSummary }) => {
                             className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm border bg-slate-50 text-slate-500 border-slate-200 hover:bg-violet-50 hover:text-violet-600 hover:border-violet-200"
                         >
                             <GitBranch size={18} />
+                        </button>
+
+                        {/* Download Transcript Button */}
+                        <button
+                            onClick={handleDownloadTranscript}
+                            disabled={isTranscriptDownloading}
+                            title="下載逐字稿 (.md)"
+                            className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm border bg-slate-50 text-slate-500 border-slate-200 hover:bg-teal-50 hover:text-teal-600 hover:border-teal-200"
+                        >
+                            {isTranscriptDownloading ? (
+                                <Loader2 size={18} className="animate-spin" />
+                            ) : (
+                                <FileDown size={18} />
+                            )}
                         </button>
 
                         {/* Threads Button */}
