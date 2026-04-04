@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Calendar, Tag, ChevronDown, CheckCircle2, AtSign, Loader2, GitBranch, FileDown } from 'lucide-react';
+import { Play, Calendar, Tag, ChevronDown, CheckCircle2, Loader2, GitBranch, FileDown } from 'lucide-react';
 import clsx from 'clsx';
 
 const MindmapModal = lazy(() => import('./MindmapModal'));
@@ -8,8 +8,6 @@ const MindmapModal = lazy(() => import('./MindmapModal'));
 const VideoCard = ({ video, onViewSummary }) => {
     const [isRead, setIsRead] = useState(video.is_read || false);
     const [isLoading, setIsLoading] = useState(false);
-    const [isThreadsLoading, setIsThreadsLoading] = useState(false);
-    const [threadsStatus, setThreadsStatus] = useState('idle'); // 'idle' | 'success' | 'error'
     const [isMindmapOpen, setIsMindmapOpen] = useState(false);
     const [isTranscriptDownloading, setIsTranscriptDownloading] = useState(false);
 
@@ -42,62 +40,7 @@ const VideoCard = ({ video, onViewSummary }) => {
         }
     };
 
-    const handleThreadsSubmit = async (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const webhookUrl = import.meta.env.VITE_THREADS_WEBHOOK_URL;
-        if (!webhookUrl) {
-            alert("Please configure VITE_THREADS_WEBHOOK_URL in your .env file");
-            return;
-        }
-
-        setIsThreadsLoading(true);
-        setThreadsStatus('idle');
-
-        try {
-            // Fetch full content if not already available
-            let finalSummary = video.fullContent || video.highlight || video.preview || "No summary available.";
-
-            try {
-                const summaryRes = await fetch(`/api/summary/${video.id}`);
-                if (summaryRes.ok) {
-                    const summaryData = await summaryRes.json();
-                    if (summaryData && summaryData.content) {
-                        finalSummary = summaryData.content;
-                    }
-                }
-            } catch (err) {
-                console.warn("Could not fetch full summary, falling back to preview", err);
-            }
-
-            const response = await fetch(webhookUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    title: video.title,
-                    link: video.link,
-                    summary: finalSummary,
-                    channel: video.channel_title,
-                    timestamp: new Date().toISOString()
-                })
-            });
-
-            if (response.ok) {
-                setThreadsStatus('success');
-                setTimeout(() => setThreadsStatus('idle'), 3000);
-            } else {
-                setThreadsStatus('error');
-            }
-        } catch (error) {
-            console.error("Failed to send to Threads Webhook", error);
-            setThreadsStatus('error');
-        } finally {
-            setIsThreadsLoading(false);
-        }
-    };
-
-    const handleDownloadTranscript = async (e) => {
+const handleDownloadTranscript = async (e) => {
         e.preventDefault();
         e.stopPropagation();
         setIsTranscriptDownloading(true);
@@ -199,26 +142,6 @@ const VideoCard = ({ video, onViewSummary }) => {
                             )}
                         </button>
 
-                        {/* Threads Button */}
-                        <button
-                            onClick={handleThreadsSubmit}
-                            disabled={isThreadsLoading}
-                            title="Post to Threads"
-                            className={clsx(
-                                "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm border",
-                                threadsStatus === 'success'
-                                    ? "bg-indigo-100 text-indigo-600 border-indigo-200"
-                                    : threadsStatus === 'error'
-                                        ? "bg-rose-100 text-rose-600 border-rose-200"
-                                        : "bg-slate-50 text-slate-500 border-slate-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200"
-                            )}
-                        >
-                            {isThreadsLoading ? (
-                                <Loader2 size={18} className="animate-spin" />
-                            ) : (
-                                <AtSign size={18} className={clsx("transition-transform duration-300", threadsStatus === 'success' && "scale-110")} />
-                            )}
-                        </button>
                     </div>
                 </div>
 
